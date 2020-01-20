@@ -1,0 +1,11 @@
+C:\Users\melfas\source\repos\LibraryApplication2\LibraryApplication2\bin\Debug\netcoreapp2.1\LibraryApplication2.deps.json
+C:\Users\melfas\source\repos\LibraryApplication2\LibraryApplication2\bin\Debug\netcoreapp2.1\LibraryApplication2.runtimeconfig.json
+C:\Users\melfas\source\repos\LibraryApplication2\LibraryApplication2\bin\Debug\netcoreapp2.1\LibraryApplication2.runtimeconfig.dev.json
+C:\Users\melfas\source\repos\LibraryApplication2\LibraryApplication2\bin\Debug\netcoreapp2.1\LibraryApplication2.dll
+C:\Users\melfas\source\repos\LibraryApplication2\LibraryApplication2\obj\Debug\netcoreapp2.1\LibraryApplication2.csprojAssemblyReference.cache
+C:\Users\melfas\source\repos\LibraryApplication2\LibraryApplication2\obj\Debug\netcoreapp2.1\LibraryApplication2.csproj.CoreCompileInputs.cache
+C:\Users\melfas\source\repos\LibraryApplication2\LibraryApplication2\obj\Debug\netcoreapp2.1\LibraryApplication2.AssemblyInfoInputs.cache
+C:\Users\melfas\source\repos\LibraryApplication2\LibraryApplication2\obj\Debug\netcoreapp2.1\LibraryApplication2.AssemblyInfo.cs
+C:\Users\melfas\source\repos\LibraryApplication2\LibraryApplication2\bin\Debug\netcoreapp2.1\LibraryApplication2.pdb
+C:\Users\melfas\source\repos\LibraryApplication2\LibraryApplication2\obj\Debug\netcoreapp2.1\LibraryApplication2.dll
+C:\Users\melfas\source\repos\LibraryApplication2\LibraryApplication2\obj\Debug\netcoreapp2.1\LibraryApplication2.pdb
