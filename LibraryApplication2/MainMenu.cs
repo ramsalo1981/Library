@@ -8,8 +8,8 @@ namespace LibraryApplication2
         {
             public void MainChoiceMenu()
             {
-                
-                while (true)
+                bool exit = false;
+                while (!exit)
                 {
                     PrintMainMenu();
                     string mainMenuChoice = Console.ReadLine();
@@ -34,6 +34,7 @@ namespace LibraryApplication2
                             LoanProcess.BorrowAMovie();
                             break;
                         case "7":
+                            CommonSwitches.ReturnItem();
                             break;
                         case "8":
                             break;
@@ -41,10 +42,10 @@ namespace LibraryApplication2
                             CommonSwitches.PrintAnyList();
                             break;
                         case "10":
-                            UpdateObjectData.UpdateBookLoan();
+                            
                             break;
                         case "0":
-                            Environment.Exit(0);
+                            exit = true;
                             break;
                         default:
                             break;
@@ -60,10 +61,9 @@ namespace LibraryApplication2
                 Console.WriteLine("[4] Update in Database");
                 Console.WriteLine("[5] Borrow a Book");
                 Console.WriteLine("[6] Borrow a Movie");
-                Console.WriteLine("[7] ");
-                Console.WriteLine("[8] List all Movie Loans");
+                Console.WriteLine("[7] Return Item");
+                Console.WriteLine("[8] ");
                 Console.WriteLine("[9] All lists in Database");
-                Console.WriteLine("[10] Return Book");
                 Console.WriteLine("[0] Exit");
             }
         }

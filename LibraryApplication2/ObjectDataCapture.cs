@@ -72,7 +72,7 @@ namespace LibraryApplication2
             PrintListsFromDB.PrintBookLoansList(id);
             Console.WriteLine("\nWhen do you want to borrow the book? (yyyy-mm-dd): ");
             string input = Console.ReadLine();
-            DateTime date = Convert.ToDateTime(input, CultureInfo.GetCultureInfo("sv-SE"));
+            DateTime date = Convert.ToDateTime(input);
 
             return date;
         }
@@ -92,7 +92,7 @@ namespace LibraryApplication2
             PrintListsFromDB.PrintMovieLoansList(id);
             Console.WriteLine("\nWhen do you want to borrow the movie? (yyyy-mm-dd): ");
             string input = Console.ReadLine();
-            DateTime date = Convert.ToDateTime(input, CultureInfo.GetCultureInfo("sv-SE"));
+            DateTime date = Convert.ToDateTime(input);
 
             return date;
         }

@@ -16,6 +16,12 @@ namespace LibraryApplication2
             Console.WriteLine("======================================================================\n\n");
         }
 
+        internal static void ExitMessage()
+        {
+            Console.WriteLine("Thank for now, please come again!");
+            Console.ReadLine();
+        }
+
         internal static void ItemReturned(string itemType)
         {
             Console.WriteLine($"Your {itemType} has been returned");
@@ -27,6 +33,13 @@ namespace LibraryApplication2
             Console.Write($"Select a {item} to {deleteOrUpdate} by index number or 0 to exit: ");
         
         }
+
+        internal static void NothingToReturn(string item)
+        {
+            Console.WriteLine($"There is no {item} to return");
+            Console.ReadLine();
+        }
+
         public static void DeletedMessage(string item)
         {
             Console.WriteLine($"The {item} was deleted");
@@ -90,6 +103,13 @@ namespace LibraryApplication2
             Console.WriteLine("1. Books");
             Console.WriteLine("2. Movies");
             Console.WriteLine("3. Members");
+        }
+        public static void SelectItem(string listOption)
+        {
+            Header();
+            Console.WriteLine($"Select an option to {listOption}: ");
+            Console.WriteLine("1. Books");
+            Console.WriteLine("2. Movies");
         }
         
     }

@@ -22,7 +22,7 @@ namespace LibraryApplication2
                     SelectMemberById.DeleteMember();
                     break;
                 default:
-                    Console.WriteLine("Invalid Option");
+                    StandardMessages.InvalidOption();
                     break;
             }
 
@@ -44,8 +44,24 @@ namespace LibraryApplication2
                     PrintListsFromDB.PrintMembersList();
                     break;
                 default:
-                    Console.WriteLine("Invalid Option");
-                    Console.ReadLine();
+                    StandardMessages.InvalidOption();
+                    break;
+            }
+        }
+        public static void ReturnItem()
+        {
+            StandardMessages.SelectItem("return");
+            string input = Console.ReadLine();
+            switch (input)
+            {
+                case "1":
+                    UpdateObjectData.UpdateBookLoan();
+                    break;
+                case "2":
+                    UpdateObjectData.UpdateMovieLoan();
+                    break;
+                default:
+                    StandardMessages.InvalidOption();
                     break;
             }
         }

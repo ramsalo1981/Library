@@ -81,8 +81,6 @@ namespace LibraryApplication2.Database
                         numberOfCopies -= 1;
                     }
                 }
-                
-
             }
             return numberOfCopies;
         }
