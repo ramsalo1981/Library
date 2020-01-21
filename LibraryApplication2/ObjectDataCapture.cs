@@ -53,7 +53,7 @@ namespace LibraryApplication2
             Database.BookHandlers bh = new Database.BookHandlers();
 
             bh.SaveBookToDB(book);
-
+            StandardMessages.WasCreatedMessage("book");
         }
 
         internal static Loan LoanBook(Member member, Book book, DateTime date)
