@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LibraryRepository.Models;
+using System;
 
 namespace LibraryApplication2
 {
@@ -28,13 +29,19 @@ namespace LibraryApplication2
                             UpdateObjectData.UpdateSwitch();
                             break;
                         case "5":
-                            LoanProcess.BorrowABook();
+                            Member member = SelectMemberById.SelectMember("lend a book to");
+                            LoanProcess.BorrowABook(member);
                             break;
                         case "6":
-                            LoanProcess.BorrowAMovie();
+                            member = SelectMemberById.SelectMember("lend a book to");
+                            LoanProcess.BorrowAMovie(member);
                             break;
                         case "7":
-                            CommonSwitches.ReturnItem();
+                            member = SelectMemberById.SelectMember("return a item");
+                            if (member != null)
+                            {
+                                CommonSwitches.ReturnItem(member);
+                            }
                             break;
                         case "8":
                             CommonSwitches.PrintAnyList();

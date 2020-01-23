@@ -1,8 +1,8 @@
 ﻿using MongoDB.Bson;
 
-namespace LibraryApplication2
+namespace LibraryRepository.Models
 {
-    class Book : Item
+    public class Book : Item
     {
         public ObjectId Id;
         public string Author { get; set; }

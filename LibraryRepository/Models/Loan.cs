@@ -4,9 +4,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace LibraryApplication2
+namespace LibraryRepository.Models
 {
-    class Loan
+    public class Loan
     {
         public ObjectId Id { get; set; }
 

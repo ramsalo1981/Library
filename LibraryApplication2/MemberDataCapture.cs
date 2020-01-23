@@ -1,6 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using LibraryRepository;
+using LibraryRepository.Database;
+using LibraryRepository.Models;
+using LibraryRepository.Repositories;
 
 namespace LibraryApplication2
 {
@@ -18,9 +22,8 @@ namespace LibraryApplication2
             age = Validations.TryAgain(age);
 
             Member member = new Member(name, age);
-            Database.MemberHandlers mh = new Database.MemberHandlers();
 
-            mh.SaveMemberToDB(member);
+            MemberRepository.SaveMemberToDB(member);
             StandardMessages.WasCreatedMessage("member");
 
         }

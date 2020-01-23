@@ -1,17 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using LibraryRepository;
+using LibraryRepository.Database;
+using LibraryRepository.Models;
+using LibraryRepository.Repositories;
 
 namespace LibraryApplication2
 {
-    class LoanProcess
+    public class LoanProcess
     {
-        public static void BorrowABook()
+        public static void BorrowABook(Member member)
         {
-            Member member = SelectMemberById.SelectMember("lend a book to");
-            Book book = SelectBookById.SelectBook("lend");
 
-            Database.LoanHandlers lh = new Database.LoanHandlers();
+            Book book = SelectBookById.SelectBook("lend");
 
             if (book != null && member != null)
             {
@@ -19,11 +21,11 @@ namespace LibraryApplication2
                 bool newDate = true;
                 while (newDate)
                 {
-                    int availableBooks = lh.CheckBookLoansToCopies(book.Id, book.NumberOfCopies, date);
+                    int availableBooks = CheckLoansToCopies.Book(book.Id, book.NumberOfCopies, date);
                     if (availableBooks > 0)
                     {
                         Loan loan = LoanDataCapture.LoanBook(member, book, date);
-                        lh.InsertBook(loan);
+                        LoanRepository.InsertBook(loan);
                         StandardMessages.LoanComplete(book.Name, loan.EndDate);
                         newDate = false;
                     }
@@ -36,7 +38,11 @@ namespace LibraryApplication2
                         {
                             newDate = false;
                         }
-                        date = LoanDataCapture.SelectNewDateBook(book.Id);
+                        else
+                        {
+                            date = LoanDataCapture.SelectNewDateBook(book.Id);
+                        }
+
                     }
 
                 }
@@ -44,12 +50,10 @@ namespace LibraryApplication2
             }
         }
 
-        public static void BorrowAMovie()
-        {
-            Member member = SelectMemberById.SelectMember("lend a book to");
-            Movie movie = SelectMovieById.SelectMovie("lend");
 
-            Database.LoanHandlers lh = new Database.LoanHandlers();
+        public static void BorrowAMovie(Member member)
+        {
+            Movie movie = SelectMovieById.SelectMovie("lend");
 
             if (movie != null && member != null)
             {
@@ -57,12 +61,12 @@ namespace LibraryApplication2
                 bool newDate = true;
                 while (newDate)
                 {
-                    int result = lh.CheckMovieLoansToCopies(movie.Id, movie.NumberOfCopies, date);
+                    int result = CheckLoansToCopies.Movie(movie.Id, movie.NumberOfCopies, date);
                     if (result > 0)
                     {
                         newDate = false;
                         Loan loan = LoanDataCapture.LoanMovie(member, movie, date);
-                        lh.InsertMovie(loan);
+                        LoanRepository.InsertMovie(loan);
                         StandardMessages.LoanComplete(movie.Name, loan.EndDate);
                     }
                     else
@@ -74,7 +78,10 @@ namespace LibraryApplication2
                         {
                             newDate = false;
                         }
-                        date = LoanDataCapture.SelectNewDateMovie(movie.Id);
+                        else
+                        {
+                            date = LoanDataCapture.SelectNewDateMovie(movie.Id);
+                        }
 
                     }
                 }

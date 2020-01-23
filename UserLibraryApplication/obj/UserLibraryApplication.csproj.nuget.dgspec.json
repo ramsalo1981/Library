@@ -1,0 +1,177 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\melfas\\Documents\\GitHub\\libben-2\\UserLibraryApplication\\UserLibraryApplication.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\melfas\\Documents\\GitHub\\libben-2\\LibraryApplication2\\LibraryApplication2.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\melfas\\Documents\\GitHub\\libben-2\\LibraryApplication2\\LibraryApplication2.csproj",
+        "projectName": "LibraryApplication2",
+        "projectPath": "C:\\Users\\melfas\\Documents\\GitHub\\libben-2\\LibraryApplication2\\LibraryApplication2.csproj",
+        "packagesPath": "C:\\Users\\melfas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\melfas\\Documents\\GitHub\\libben-2\\LibraryApplication2\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\melfas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {
+              "C:\\Users\\melfas\\Documents\\GitHub\\libben-2\\LibraryRepository\\LibraryRepository.csproj": {
+                "projectPath": "C:\\Users\\melfas\\Documents\\GitHub\\libben-2\\LibraryRepository\\LibraryRepository.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\melfas\\Documents\\GitHub\\libben-2\\LibraryRepository\\LibraryRepository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\melfas\\Documents\\GitHub\\libben-2\\LibraryRepository\\LibraryRepository.csproj",
+        "projectName": "LibraryRepository",
+        "projectPath": "C:\\Users\\melfas\\Documents\\GitHub\\libben-2\\LibraryRepository\\LibraryRepository.csproj",
+        "packagesPath": "C:\\Users\\melfas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\melfas\\Documents\\GitHub\\libben-2\\LibraryRepository\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\melfas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.10.1, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\melfas\\Documents\\GitHub\\libben-2\\UserLibraryApplication\\UserLibraryApplication.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\melfas\\Documents\\GitHub\\libben-2\\UserLibraryApplication\\UserLibraryApplication.csproj",
+        "projectName": "UserLibraryApplication",
+        "projectPath": "C:\\Users\\melfas\\Documents\\GitHub\\libben-2\\UserLibraryApplication\\UserLibraryApplication.csproj",
+        "packagesPath": "C:\\Users\\melfas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\melfas\\Documents\\GitHub\\libben-2\\UserLibraryApplication\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\melfas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {
+              "C:\\Users\\melfas\\Documents\\GitHub\\libben-2\\LibraryApplication2\\LibraryApplication2.csproj": {
+                "projectPath": "C:\\Users\\melfas\\Documents\\GitHub\\libben-2\\LibraryApplication2\\LibraryApplication2.csproj"
+              },
+              "C:\\Users\\melfas\\Documents\\GitHub\\libben-2\\LibraryRepository\\LibraryRepository.csproj": {
+                "projectPath": "C:\\Users\\melfas\\Documents\\GitHub\\libben-2\\LibraryRepository\\LibraryRepository.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

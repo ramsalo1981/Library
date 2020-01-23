@@ -1,10 +1,11 @@
-﻿using MongoDB.Bson;
+﻿using LibraryRepository.Models;
+using MongoDB.Bson;
 using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace LibraryApplication2.Database
+namespace LibraryRepository.Database
 {
     class MemberHandlers
     {

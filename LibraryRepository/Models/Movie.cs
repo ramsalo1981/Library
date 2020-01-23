@@ -3,9 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace LibraryApplication2
+namespace LibraryRepository.Models
 {
-    class Movie : Item
+    public class Movie : Item
     {
         public ObjectId Id;
         public int Duration { get; set; }

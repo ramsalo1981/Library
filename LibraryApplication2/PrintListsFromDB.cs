@@ -2,45 +2,56 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using LibraryRepository;
+using LibraryRepository.Database;
+using LibraryRepository.Models;
+using LibraryRepository.Repositories;
 
 namespace LibraryApplication2
 {
-    class PrintListsFromDB
+    public class PrintListsFromDB
     {
         public static void PrintBookLoansList(ObjectId id)
         {
-            Database.LoanHandlers lh = new Database.LoanHandlers();
-            List<Loan> loans = lh.GetBookLoansById(id);
+            List<Loan> loans = LoanRepository.GetBookLoansById(id);
 
             StandardMessages.ListAllItems("loans");
+            DateTime today = DateTime.Today;
 
             foreach (Loan loan in loans)
             {
+                int result = Validations.CompareDates(today, loan.EndDate);
+                if (result < 0)
+                {
                 var startDate = loan.StartDate.ToString("yyyy-MM-dd");
                 var endDate = loan.EndDate.ToString("yyyy-MM-dd");
                 
                 Console.WriteLine($"{loan.BookArticle.Name} - {loan.Member.Name} - {startDate} - {endDate}");
+                }
             }
         }
         public static void PrintMovieLoansList(ObjectId id)
         {
-            Database.LoanHandlers lh = new Database.LoanHandlers();
-            List<Loan> loans = lh.GetMovieLoansById(id);
+            List<Loan> loans = LoanRepository.GetMovieLoansById(id);
 
             StandardMessages.ListAllItems("loans");
+            DateTime today = DateTime.Today;
 
             foreach (Loan loan in loans)
             {
-                var startDate = loan.StartDate.ToString("yyyy-MM-dd");
-                var endDate = loan.EndDate.ToString("yyyy-MM-dd");
-                Console.WriteLine($"{loan.MovieArticle.Name} - {loan.Member.Name} - {startDate} - {endDate}");
+                int result = Validations.CompareDates(today, loan.EndDate);
+                if (result < 0)
+                {
+                    var startDate = loan.StartDate.ToString("yyyy-MM-dd");
+                    var endDate = loan.EndDate.ToString("yyyy-MM-dd");
+                    Console.WriteLine($"{loan.MovieArticle.Name} - {loan.Member.Name} - {startDate} - {endDate}");
+                }
             }
             
         }
         public static void PrintBooksList()
         {
-            Database.BookHandlers bh = new Database.BookHandlers();
-            List<Book> books = bh.GetBooksFromDB();
+            List<Book> books = BookRepository.GetBooks();
 
             StandardMessages.ListAllItems("books");
             foreach (Book book in books)
@@ -52,8 +63,7 @@ namespace LibraryApplication2
         }
         public static void PrintMoviesList()
         {
-            Database.MovieHandlers mh = new Database.MovieHandlers();
-            List<Movie> movies = mh.GetMoviesFromDB();
+            List<Movie> movies = MovieRepository.GetMovies();
 
             StandardMessages.ListAllItems("movies");
             foreach (Movie movie in movies)
@@ -68,8 +78,7 @@ namespace LibraryApplication2
         }
         public static void PrintMembersList()
         {
-            Database.MemberHandlers mh = new Database.MemberHandlers();
-            List<Member> members = mh.GetMembersFromDB();
+            List<Member> members = MemberRepository.GetMembers();
 
             StandardMessages.ListAllItems("members");
             foreach (Member member in members)

@@ -1,6 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using LibraryRepository;
+using LibraryRepository.Database;
+using LibraryRepository.Models;
+using LibraryRepository.Repositories;
 
 namespace LibraryApplication2
 {
@@ -8,8 +12,7 @@ namespace LibraryApplication2
     {
         public static Member SelectMember(string updateOrDelete)
         {
-            Database.MemberHandlers mh = new Database.MemberHandlers();
-            List<Member> members = mh.GetMembersFromDB();
+            List<Member> members = MemberRepository.GetMembers();
 
             StandardMessages.ListAllItems("members");
 
@@ -38,10 +41,9 @@ namespace LibraryApplication2
         public static void DeleteMember()
         {
             Member member = SelectMember("delete");
-            Database.MemberHandlers mh = new Database.MemberHandlers();
             if (member != null)
             {
-                mh.DeleteMemberById(member);
+                MemberRepository.DeleteMember(member);
                 StandardMessages.DeletedMessage("member");
             }
         }

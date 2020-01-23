@@ -1,33 +1,36 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using LibraryRepository;
+using LibraryRepository.Database;
+using LibraryRepository.Models;
+using LibraryRepository.Repositories;
 
 namespace LibraryApplication2
 {
-    class UpdateObjectData
+    public class UpdateObjectData
     {
-        public static void UpdateBookLoan()
+        public static void UpdateBookLoan(Member member)
         {
-            Loan loanToReturn = SelectLoanById.SelectBookLoan();
+            Loan loanToReturn = SelectLoanById.SelectBookLoan(member);
+            
             if (loanToReturn != null)
             {
                 DateTime returnDate = DateTime.Today;
-                Database.LoanHandlers lh = new Database.LoanHandlers();
-                lh.ReturnBook(loanToReturn, returnDate);
+                LoanRepository.ReturnBook(loanToReturn, returnDate);
 
                 StandardMessages.ItemReturned("book");
             }
         }
-        public static void UpdateMovieLoan()
+        public static void UpdateMovieLoan(Member member)
         {
-            Loan loanToReturn = SelectLoanById.SelectMovieLoan();
+            Loan loanToReturn = SelectLoanById.SelectMovieLoan(member);
             if (loanToReturn != null)
             {
                 DateTime returnDate = DateTime.Today;
-                Database.LoanHandlers lh = new Database.LoanHandlers();
-                lh.ReturnMovie(loanToReturn, returnDate);
+                LoanRepository.ReturnMovie(loanToReturn, returnDate);
 
-                StandardMessages.ItemReturned("book");
+                StandardMessages.ItemReturned("movie");
             }
         }
         private static void UpdateMember()
@@ -40,8 +43,7 @@ namespace LibraryApplication2
                 Console.Write("New age of Member: ");
                 int age = int.Parse(Console.ReadLine());
 
-                Database.MemberHandlers mh = new Database.MemberHandlers();
-                mh.UpdateMember(memberToUpdate.Id, name, age);
+                MemberRepository.UpdateMember(memberToUpdate.Id, name, age);
                 StandardMessages.UpdatedMessage("member");
             }
         }
@@ -76,8 +78,7 @@ namespace LibraryApplication2
 
                 Book updatedBook = new Book(name, "book", releseYear, genre, numberOfCopies, author, pages);
 
-                Database.BookHandlers bh = new Database.BookHandlers();
-                bh.UpdateBook(bookToUpdate, updatedBook);
+                BookRepository.UpdateBook(bookToUpdate, updatedBook);
 
                 StandardMessages.UpdatedMessage("book");
             }
@@ -117,8 +118,7 @@ namespace LibraryApplication2
 
                 Movie updatedMovie = new Movie(name, "movie", releseYear, genre, numberOfCopies, duration, ageLimit);
 
-                Database.MovieHandlers mh = new Database.MovieHandlers();
-                mh.UpdateMovie(movieToUpdate, updatedMovie);
+                MovieRepository.UpdateMovie(movieToUpdate, updatedMovie);
 
                 StandardMessages.UpdatedMessage("movie");
             }

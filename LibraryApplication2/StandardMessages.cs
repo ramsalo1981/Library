@@ -4,7 +4,7 @@ using System.Text;
 
 namespace LibraryApplication2
 {
-    class StandardMessages
+    public class StandardMessages
     {
         public static void Header()
         {
@@ -16,13 +16,13 @@ namespace LibraryApplication2
             Console.WriteLine("======================================================================\n\n");
         }
 
-        internal static void ExitMessage()
+        public static void ExitMessage()
         {
             Console.WriteLine("Thank for now, please come again!");
             Console.ReadLine();
         }
 
-        internal static void ItemReturned(string itemType)
+        public static void ItemReturned(string itemType)
         {
             Console.WriteLine($"Your {itemType} has been returned");
             Console.ReadLine();
@@ -34,7 +34,7 @@ namespace LibraryApplication2
         
         }
 
-        internal static void NothingToReturn(string item)
+        public static void NothingToReturn(string item)
         {
             Console.WriteLine($"There is no {item} to return");
             Console.ReadLine();
@@ -71,20 +71,20 @@ namespace LibraryApplication2
             Console.ReadLine();
         }
 
-        internal static void LoanComplete(string name, DateTime endDate)
+        public static void LoanComplete(string name, DateTime endDate)
         {
             var outputDate = endDate.ToString("yyyy-MM-dd");
             Console.WriteLine($"You borrowed {name}, please return it before {outputDate}, thanks!");
             Console.ReadLine();
         }
 
-        internal static void OutOfRange()
+        public static void OutOfRange()
         {
             Console.WriteLine("Your selected index number was out of range!");
             Console.ReadLine();
         }
 
-        internal static void OutOfCopies()
+        public static void OutOfCopies()
         {
             Console.WriteLine("Your Item has no available copies, do you want to reserve another date?");
             Console.Write("Press enter if you do... [0] if you want to exit: ");

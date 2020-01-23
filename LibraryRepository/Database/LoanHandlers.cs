@@ -1,10 +1,11 @@
-﻿using MongoDB.Bson;
+﻿using LibraryRepository.Models;
+using MongoDB.Bson;
 using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace LibraryApplication2.Database
+namespace LibraryRepository.Database
 {
     class LoanHandlers
     {
@@ -28,10 +29,15 @@ namespace LibraryApplication2.Database
             var loans = collection.Find<Loan>(l => l.BookArticle.Id == id).ToList();
             return loans;
         }
+        public List<Loan> GetBookLoansByMember(Member member)
+        {
+            var collection = _database.GetCollection<Loan>(BOOK_LOANS_COLLECTION);
+            var loans = collection.Find<Loan>(l => l.Member.Id == member.Id).ToList();
+            return loans;
+        }
         public void ReturnBook(Loan loanToReturn, DateTime returnDate)
         {
             var collection = _database.GetCollection<Loan>(BOOK_LOANS_COLLECTION);
-
             UpdateDefinition<Loan> update = Builders<Loan>.Update
                 .Set(l => l.EndDate, returnDate);
             collection.UpdateOne(l => l.Id == loanToReturn.Id, update);
@@ -48,6 +54,12 @@ namespace LibraryApplication2.Database
             var loans = collection.Find<Loan>(m => m.MovieArticle.Id == id).ToList();
             return loans;
         }
+        public List<Loan> GetMovieLoansByMember(Member member)
+        {
+            var collection = _database.GetCollection<Loan>(MOVIE_LOANS_COLLECTION);
+            var loans = collection.Find<Loan>(m => m.Member.Id == member.Id).ToList();
+            return loans;
+        }
         public void ReturnMovie(Loan loanToReturn, DateTime returnDate)
         {
             var collection = _database.GetCollection<Loan>(MOVIE_LOANS_COLLECTION);
@@ -57,61 +69,7 @@ namespace LibraryApplication2.Database
             collection.UpdateOne(l => l.Id == loanToReturn.Id, update);
         }
 
-        public int CheckBookLoansToCopies(ObjectId bookId, int numberOfCopies, DateTime date)
-        {
-            List<Loan> loans = GetBookLoansById(bookId);
-
-            foreach (Loan loan in loans)
-            {
-                int checkStartDate = Validations.CompareDates(date, loan.StartDate);
-                int checkEndDate = Validations.CompareDates(date, loan.EndDate);
-
-                if (checkStartDate >= 0 && checkEndDate <= 0)
-                {
-                    numberOfCopies -= 1;
-                }
-                else if (true)
-                {
-                    DateTime endDate = date.AddMonths(3);
-                    checkStartDate = Validations.CompareDates(endDate, loan.StartDate);
-                    checkEndDate = Validations.CompareDates(endDate, loan.EndDate);
-
-                    if (checkStartDate >= 0 && checkEndDate <= 0)
-                    {
-                        numberOfCopies -= 1;
-                    }
-                }
-            }
-            return numberOfCopies;
-        }
-
-        public int CheckMovieLoansToCopies(ObjectId id, int numberOfCopies, DateTime date)
-        {
-
-            List<Loan> loans = GetMovieLoansById(id);
-            foreach (Loan loan in loans)
-            {
-                int checkStartDate = Validations.CompareDates(date, loan.StartDate);
-                int checkEndDate = Validations.CompareDates(date, loan.EndDate);
-
-                if (checkStartDate >= 0 && checkEndDate <= 0)
-                {
-                    numberOfCopies -= 1;
-                }
-                else if (true)
-                {
-                    DateTime endDate = date.AddMonths(3);
-                    checkStartDate = Validations.CompareDates(endDate, loan.StartDate);
-                    checkEndDate = Validations.CompareDates(endDate, loan.EndDate);
-
-                    if (checkStartDate >= 0 && checkEndDate <= 0)
-                    {
-                        numberOfCopies -= 1;
-                    }
-                }
-            }
-            return numberOfCopies;
-        }
+        
 
     }
 }

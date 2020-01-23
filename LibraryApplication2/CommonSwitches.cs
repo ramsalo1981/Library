@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LibraryRepository.Models;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -48,17 +49,17 @@ namespace LibraryApplication2
                     break;
             }
         }
-        public static void ReturnItem()
+        public static void ReturnItem(Member member)
         {
             StandardMessages.SelectItem("return");
             string input = Console.ReadLine();
             switch (input)
             {
                 case "1":
-                    UpdateObjectData.UpdateBookLoan();
+                    UpdateObjectData.UpdateBookLoan(member);
                     break;
                 case "2":
-                    UpdateObjectData.UpdateMovieLoan();
+                    UpdateObjectData.UpdateMovieLoan(member);
                     break;
                 default:
                     StandardMessages.InvalidOption();

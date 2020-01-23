@@ -1,6 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using LibraryRepository;
+using LibraryRepository.Database;
+using LibraryRepository.Models;
+using LibraryRepository.Repositories;
 
 namespace LibraryApplication2
 {
@@ -9,8 +13,7 @@ namespace LibraryApplication2
 
         public static Book SelectBook(string updateOrDelete)
         {
-            Database.BookHandlers bh = new Database.BookHandlers();
-            List<Book> books = bh.GetBooksFromDB();
+            List<Book> books = BookRepository.GetBooks();
 
             StandardMessages.ListAllItems("books");
 
@@ -39,10 +42,9 @@ namespace LibraryApplication2
         public static void DeleteBook()
         {
             Book book = SelectBook("delete");
-            Database.BookHandlers bh = new Database.BookHandlers();
             if (book != null)
             {
-                bh.DeleteBookById(book);
+                BookRepository.DeleteBook(book);
                 StandardMessages.DeletedMessage("book");
             }
 

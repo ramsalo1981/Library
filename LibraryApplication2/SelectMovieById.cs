@@ -1,6 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using LibraryRepository;
+using LibraryRepository.Database;
+using LibraryRepository.Models;
+using LibraryRepository.Repositories;
+
 
 namespace LibraryApplication2
 {
@@ -10,8 +15,7 @@ namespace LibraryApplication2
 
         public static Movie SelectMovie(string updateOrDelete)
         {
-            Database.MovieHandlers mh = new Database.MovieHandlers();
-            List<Movie> movies = mh.GetMoviesFromDB();
+            List<Movie> movies = MovieRepository.GetMovies();
 
             StandardMessages.ListAllItems("movies");
 
@@ -31,18 +35,22 @@ namespace LibraryApplication2
             {
                 return movies[indexSelected - 1];
             }
+            else if (indexSelected == 0)
+            {
+                return null;
+            }
             else
             {
+                StandardMessages.NothingToReturn("movies");
                 return null;
             }
         }
         public static void DeleteMovie()
         {
             Movie movie = SelectMovie("delete");
-            Database.MovieHandlers mh = new Database.MovieHandlers();
             if (movie != null)
             {
-                mh.DeleteMovieById(movie);
+                MovieRepository.DeleteMovie(movie);
                 StandardMessages.DeletedMessage("movie");
             }
         }

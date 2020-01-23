@@ -1,6 +1,6 @@
-﻿namespace LibraryApplication2
+﻿namespace LibraryRepository.Models
 {
-    abstract class Item
+    public abstract class Item
     {
         public string Name { get; set; }
         public string Type { get; set; }

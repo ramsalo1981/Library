@@ -31,3 +31,6 @@ C:\Users\melfas\Documents\GitHub\libben-2\LibraryApplication2\obj\Debug\netcorea
 C:\Users\melfas\Documents\GitHub\libben-2\LibraryApplication2\obj\Debug\netcoreapp2.1\LibraryApplication2.AssemblyInfo.cs
 C:\Users\melfas\Documents\GitHub\libben-2\LibraryApplication2\obj\Debug\netcoreapp2.1\LibraryApplication2.dll
 C:\Users\melfas\Documents\GitHub\libben-2\LibraryApplication2\obj\Debug\netcoreapp2.1\LibraryApplication2.pdb
+C:\Users\melfas\Documents\GitHub\libben-2\LibraryApplication2\bin\Debug\netcoreapp2.1\LibraryRepository.dll
+C:\Users\melfas\Documents\GitHub\libben-2\LibraryApplication2\bin\Debug\netcoreapp2.1\LibraryRepository.pdb
+C:\Users\melfas\Documents\GitHub\libben-2\LibraryApplication2\obj\Debug\netcoreapp2.1\LibraryApplication2.csproj.CopyComplete

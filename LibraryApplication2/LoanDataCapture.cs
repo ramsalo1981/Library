@@ -2,6 +2,9 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using LibraryRepository;
+using LibraryRepository.Database;
+using LibraryRepository.Models;
 
 namespace LibraryApplication2
 {
@@ -21,7 +24,7 @@ namespace LibraryApplication2
         internal static DateTime SelectNewDateBook(ObjectId id)
         {
             PrintListsFromDB.PrintBookLoansList(id);
-            Console.WriteLine("\nWhen do you want to borrow the book? (yyyy-mm-dd): ");
+            Console.WriteLine("\nWhen do you want to borrow the book, enter 0 to Exit? (yyyy-mm-dd): ");
             string input = Console.ReadLine();
 
             DateTime date = Validations.Date(input);

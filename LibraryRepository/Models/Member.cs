@@ -3,15 +3,19 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace LibraryApplication2
+namespace LibraryRepository.Models
 {
-    class Member
+    public class Member
     {
         public ObjectId Id;
         public string Name { get; set; }
         public int Age { get; set; }
         public Loan Loans { get; set; }
 
+        public Member()
+        {
+
+        }
         public Member(string name, int age)
         {
             Name = name;

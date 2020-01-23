@@ -1,8 +1,11 @@
-﻿using MongoDB.Bson;
+﻿using LibraryRepository.Models;
+using LibraryRepository.Database;
+using MongoDB.Bson;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Text;
+using LibraryRepository.Repositories;
 
 namespace LibraryApplication2
 {
@@ -50,9 +53,8 @@ namespace LibraryApplication2
             pages = Validations.TryAgain(pages);
 
             Book book = new Book(name, type, releseYear, genre, numberOfCopies, author, pages);
-            Database.BookHandlers bh = new Database.BookHandlers();
 
-            bh.SaveBookToDB(book);
+            BookRepository.SaveBookToDB(book);
             StandardMessages.WasCreatedMessage("book");
         }
 
@@ -70,8 +72,7 @@ namespace LibraryApplication2
 
             Movie movie = new Movie(name, type, releseYear, genre, numberOfCopies, duration, ageLimit);
 
-            Database.MovieHandlers movieHandler = new Database.MovieHandlers();
-            movieHandler.SaveMovieToDB(movie);
+            MovieRepository.SaveMovieToDB(movie);
 
             StandardMessages.WasCreatedMessage("movie");
         }

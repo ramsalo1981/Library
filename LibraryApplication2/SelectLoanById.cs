@@ -1,19 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using LibraryRepository;
+using LibraryRepository.Database;
+using LibraryRepository.Models;
+using LibraryRepository.Repositories;
 
 namespace LibraryApplication2
 {
     class SelectLoanById
     {
-        public static Loan SelectBookLoan()
+        public static Loan SelectBookLoan(Member member)
         {
-            Book book = SelectBookById.SelectBook("return");
-            Database.LoanHandlers lh = new Database.LoanHandlers();
-            if (book != null)
+            //Book book = SelectBookById.SelectBook("return");
+            List<Book> book = BookRepository.GetBooks();
+            if (book.Count > 0)
             {
-                List<Loan> loans = lh.GetBookLoansById(book.Id);
-                StandardMessages.ListAllItems("book loans");
+                List<Loan> loans = LoanRepository.GetBookLoans(member);
+                StandardMessages.ListAllItems("your book loans");
 
                 int i = 1;
                 foreach (Loan loan in loans)
@@ -24,17 +28,24 @@ namespace LibraryApplication2
                 }
                 StandardMessages.SelectItemToDelete("book", "return");
                 string input = Console.ReadLine();
-                int index = Validations.ParseInt(input);
-                index = Validations.TryAgain(index);
-
-                bool isValid = Validations.SelectedIndex(index, i, loans.Count);
-                if (isValid)
+                if (input != "0")
                 {
-                    return loans[index - 1];
+                    int index = Validations.ParseInt(input);
+                    index = Validations.TryAgain(index);
+
+                    bool isValid = Validations.SelectedIndex(index, i, loans.Count);
+                    if (isValid)
+                    {
+                        return loans[index - 1];
+                    }
+                    else
+                    {
+                        StandardMessages.InvalidOption();
+                        return null;
+                    }
                 }
                 else
                 {
-                    StandardMessages.InvalidOption();
                     return null;
                 }
 
@@ -46,13 +57,13 @@ namespace LibraryApplication2
             }
         }
 
-        public static Loan SelectMovieLoan()
+        public static Loan SelectMovieLoan(Member member)
         {
             Movie movie = SelectMovieById.SelectMovie("return");
-            Database.LoanHandlers lh = new Database.LoanHandlers();
+
             if (movie != null)
             {
-                List<Loan> loans = lh.GetMovieLoansById(movie.Id);
+                List<Loan> loans = LoanRepository.GetMovieLoansByMember(member);
                 StandardMessages.ListAllItems("movie loans");
 
                 int i = 1;
@@ -64,23 +75,29 @@ namespace LibraryApplication2
                 }
                 StandardMessages.SelectItemToDelete("movie", "return");
                 string input = Console.ReadLine();
-                int index = Validations.ParseInt(input);
-                index = Validations.TryAgain(index);
+                
+                if (input != "0")
+                {
+                    int index = Validations.ParseInt(input);
+                    index = Validations.TryAgain(index);
 
-                bool isValid = Validations.SelectedIndex(index, i, loans.Count);
-                if (isValid)
-                {
-                    return loans[index - 1];
+                    bool isValid = Validations.SelectedIndex(index, i, loans.Count);
+                    if (isValid)
+                    {
+                        return loans[index - 1];
+                    }
+                    else
+                    {
+                        StandardMessages.InvalidOption();
+                        return null;
+                    }
                 }
-                else
-                {
-                    StandardMessages.InvalidOption();
-                    return null;
-                }
+                return null;
+
             }
             else
             {
-                StandardMessages.NothingToReturn("movies");
+
                 return null;
             }
 
