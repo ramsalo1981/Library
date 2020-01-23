@@ -16,10 +16,10 @@ namespace LibraryApplication2
                     switch (mainMenuChoice)
                     {
                         case "1":
-                            ObjectDataCapture.Item("an Item");
+                            ItemDataCapture.Item("an Item");
                             break;
                         case "2":
-                            ObjectDataCapture.CreateMember();
+                            MemberDataCapture.CreateMember();
                             break;
                         case "3":
                             CommonSwitches.DeleteSwitch();
@@ -37,9 +37,10 @@ namespace LibraryApplication2
                             CommonSwitches.ReturnItem();
                             break;
                         case "8":
+                            CommonSwitches.PrintAnyList();
                             break;
                         case "9":
-                            CommonSwitches.PrintAnyList();
+                            
                             break;
                         case "10":
                             
@@ -62,8 +63,8 @@ namespace LibraryApplication2
                 Console.WriteLine("[5] Borrow a Book");
                 Console.WriteLine("[6] Borrow a Movie");
                 Console.WriteLine("[7] Return Item");
-                Console.WriteLine("[8] ");
-                Console.WriteLine("[9] All lists in Database");
+                Console.WriteLine("[8] All lists in Database");
+                //Console.WriteLine("[9] ");
                 Console.WriteLine("[0] Exit");
             }
         }

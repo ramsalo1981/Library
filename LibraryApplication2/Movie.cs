@@ -15,11 +15,6 @@ namespace LibraryApplication2
             Duration = duration;
             AgeLimit = ageLimit;
         }
-        //TimeSpan t = TimeSpan.FromMinutes(80);
-
-        //string answer = string.Format("{0:D2}h:{1:D2}m",
-        //                t.Hours,
-        //                t.Minutes
-        //                );
+        
     }
 }

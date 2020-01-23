@@ -6,7 +6,7 @@ using System.Text;
 
 namespace LibraryApplication2
 {
-    class ObjectDataCapture
+    class ItemDataCapture
     {
         public static void Item(string item)
         {
@@ -56,47 +56,6 @@ namespace LibraryApplication2
             StandardMessages.WasCreatedMessage("book");
         }
 
-        internal static Loan LoanBook(Member member, Book book, DateTime date)
-        {
-            DateTime startDate = date;
-            DateTime endDate = date.AddMonths(3);
-
-            Loan loan = new Loan(startDate, endDate, member);
-            loan.BookArticle = book;
-
-            return loan;
-        }
-
-        internal static DateTime SelectNewDateBook(ObjectId id)
-        {
-            PrintListsFromDB.PrintBookLoansList(id);
-            Console.WriteLine("\nWhen do you want to borrow the book? (yyyy-mm-dd): ");
-            string input = Console.ReadLine();
-            DateTime date = Convert.ToDateTime(input);
-
-            return date;
-        }
-
-        internal static Loan LoanMovie(Member member, Movie movie, DateTime date)
-        {
-            DateTime startDate = date;
-            DateTime endDate = date.AddMonths(3);
-
-            Loan loan = new Loan(startDate, endDate, member);
-            loan.MovieArticle = movie;
-            return loan;
-        }
-
-        internal static DateTime SelectNewDateMovie(ObjectId id)
-        {
-            PrintListsFromDB.PrintMovieLoansList(id);
-            Console.WriteLine("\nWhen do you want to borrow the movie? (yyyy-mm-dd): ");
-            string input = Console.ReadLine();
-            DateTime date = Convert.ToDateTime(input);
-
-            return date;
-        }
-
         private static void Movie(string name, string type, int releseYear, string genre, int numberOfCopies)
         {
             Console.Write("Duration (minutes) of the Movie: ");
@@ -116,24 +75,7 @@ namespace LibraryApplication2
 
             StandardMessages.WasCreatedMessage("movie");
         }
-        public static void CreateMember()
-        {
-            StandardMessages.CreateMessage("a Member");
-            Console.Write("Name of Member: ");
-            string name = Console.ReadLine();
-
-            Console.Write("Age of Member: ");
-            string input = Console.ReadLine();
-            int age = Validations.ParseInt(input);
-            age = Validations.TryAgain(age);
-
-            Member member = new Member(name, age);
-            Database.MemberHandlers mh = new Database.MemberHandlers();
-
-            mh.SaveMemberToDB(member);
-            StandardMessages.WasCreatedMessage("member");
-
-        }
+        
 
         
 

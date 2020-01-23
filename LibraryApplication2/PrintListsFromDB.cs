@@ -45,7 +45,7 @@ namespace LibraryApplication2
             StandardMessages.ListAllItems("books");
             foreach (Book book in books)
             {
-                Console.WriteLine($"{book.Id} {book.Type} {book.Name} {book.ReleseYear} {book.Genre} {book.Author} {book.Pages}");
+                Console.WriteLine($"{book.Type} {book.Name} {book.ReleseYear} {book.Genre} {book.Author} {book.Pages}");
             }
             Console.WriteLine("\nPress enter to continue...");
             Console.ReadLine();
@@ -61,7 +61,7 @@ namespace LibraryApplication2
                 TimeSpan t = TimeSpan.FromMinutes(movie.Duration);
                 string duration = string.Format("{0:D2}h:{1:D2}m", t.Hours, t.Minutes);
 
-                Console.WriteLine($"{movie.Id} {movie.Name} {movie.ReleseYear} {movie.Genre} {duration} {movie.AgeLimit}");
+                Console.WriteLine($"{movie.Name} {movie.ReleseYear} {movie.Genre} {duration} {movie.AgeLimit}");
             }
             Console.WriteLine("\nPress enter to continue...");
             Console.ReadLine();
@@ -74,7 +74,7 @@ namespace LibraryApplication2
             StandardMessages.ListAllItems("members");
             foreach (Member member in members)
             {
-                Console.WriteLine($"{member.Id} {member.Name} {member.Age}");
+                Console.WriteLine($"{member.Name} {member.Age}");
             }
             Console.WriteLine("\nPress enter to continue...");
             Console.ReadLine();

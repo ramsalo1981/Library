@@ -12,7 +12,7 @@ namespace LibraryApplication2
             {
                 return false;
             }
-            else if (indexSelected > i-1)
+            else if (indexSelected > i - 1)
             {
                 StandardMessages.OutOfRange();
                 return false;
@@ -36,7 +36,7 @@ namespace LibraryApplication2
                 {
                     Console.WriteLine("Invalid input");
                 }
-                
+
             }
             catch (FormatException)
             {
@@ -50,6 +50,7 @@ namespace LibraryApplication2
         }
         public static int TryAgain(int enteredNumber)
         {
+
             if (enteredNumber == 0)
             {
                 while (enteredNumber == 0)
@@ -63,9 +64,29 @@ namespace LibraryApplication2
         }
         public static int CompareDates(DateTime date, DateTime endDate)
         {
-            
+
             int result = DateTime.Compare(date, endDate);
             return result;
+        }
+        public static DateTime Date(string dateInput)
+        {
+            DateTime validDate = new DateTime();
+            bool valid = false;
+            while (!valid)
+            {
+                try
+                {
+                    validDate = Convert.ToDateTime(dateInput);
+                    valid = true;
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("Invalid Date Input, please try again (yyyy-mm-dd)");
+                    dateInput = Console.ReadLine();
+                }
+            }
+
+            return validDate;
         }
 
 

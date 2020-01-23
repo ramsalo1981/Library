@@ -22,7 +22,7 @@ namespace LibraryApplication2
                     int availableBooks = lh.CheckBookLoansToCopies(book.Id, book.NumberOfCopies, date);
                     if (availableBooks > 0)
                     {
-                        Loan loan = ObjectDataCapture.LoanBook(member, book, date);
+                        Loan loan = LoanDataCapture.LoanBook(member, book, date);
                         lh.InsertBook(loan);
                         StandardMessages.LoanComplete(book.Name, loan.EndDate);
                         newDate = false;
@@ -36,7 +36,7 @@ namespace LibraryApplication2
                         {
                             newDate = false;
                         }
-                        date = ObjectDataCapture.SelectNewDateBook(book.Id);
+                        date = LoanDataCapture.SelectNewDateBook(book.Id);
                     }
 
                 }
@@ -61,7 +61,7 @@ namespace LibraryApplication2
                     if (result > 0)
                     {
                         newDate = false;
-                        Loan loan = ObjectDataCapture.LoanMovie(member, movie, date);
+                        Loan loan = LoanDataCapture.LoanMovie(member, movie, date);
                         lh.InsertMovie(loan);
                         StandardMessages.LoanComplete(movie.Name, loan.EndDate);
                     }
@@ -74,7 +74,7 @@ namespace LibraryApplication2
                         {
                             newDate = false;
                         }
-                        date = ObjectDataCapture.SelectNewDateMovie(movie.Id);
+                        date = LoanDataCapture.SelectNewDateMovie(movie.Id);
 
                     }
                 }

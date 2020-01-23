@@ -18,7 +18,6 @@ namespace LibraryApplication2.Database
         {
             var collection = _database.GetCollection<Book>(BOOKS_COLLECTION);
             collection.InsertOne(book);
-            StandardMessages.WasCreatedMessage("book");
         }
 
         public void DeleteBookById(Book book)
