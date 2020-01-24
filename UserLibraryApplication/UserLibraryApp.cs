@@ -4,6 +4,7 @@ using LibraryApplication2;
 using LibraryRepository.Database;
 using LibraryRepository.Models;
 using LibraryRepository.Repositories;
+using CommonClasses;
 
 namespace UserLibraryApplication
 {
@@ -13,31 +14,24 @@ namespace UserLibraryApplication
         internal void Start()
         {
             ShowLoginScreen();
+            MainMenuOptions();
         }
         private void ShowLoginScreen()
         {
-            bool validLoginName = false;
-            while (!validLoginName)
-            {
-            List<Member> members = MemberRepository.GetMembers();
             Console.Write("Enter your Member name to log in: ");
             string input = Console.ReadLine();
-            foreach (Member member in members)
+            while (true)
             {
-                if (input == member.Name)
-                {
-                    validLoginName = true;
-                        thisMember = member;
-                }
-            }
-            if (!validLoginName)
+
+            bool validUsername =  LibraryApplication2.Validations.UserName(input);
+            if (!validUsername)
             {
                     Console.WriteLine("Invalid Member Name, please try again");
                     input = Console.ReadLine();
             }
                 else
                 {
-                    MainMenuOptions();
+                    break;
                 }
             }
         }
@@ -63,7 +57,7 @@ namespace UserLibraryApplication
                         LoanProcess.BorrowAMovie(thisMember);
                         break;
                     case "5":
-                        UpdateObjectData.UpdateBookLoan(thisMember);
+                        ReturnItem.UpdateBookLoan(thisMember);
                         break;
                     case "6":
                         break;
@@ -87,7 +81,7 @@ namespace UserLibraryApplication
         }
         private void PrintMainMenu()
         {
-            StandardMessages.Header();
+            CommonClasses.StandardMessages.Header();
             Console.WriteLine("[1] List All Books");
             Console.WriteLine("[2] Borrow a Book");
             Console.WriteLine("[3] List All Movies");

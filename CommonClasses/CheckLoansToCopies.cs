@@ -1,17 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using LibraryRepository;
-using LibraryRepository.Database;
-using LibraryRepository.Models;
+﻿using LibraryRepository.Models;
 using LibraryRepository.Repositories;
 using MongoDB.Bson;
+using System;
+using System.Collections.Generic;
+using System.Text;
 
-namespace LibraryApplication2
+namespace CommonClasses
 {
-    class CheckLoansToCopies
+    public class CheckLoansToCopies
     {
-        
         public static int Book(ObjectId bookId, int numberOfCopies, DateTime date)
         {
             List<Loan> loans = LoanRepository.GetBookLoansById(bookId);

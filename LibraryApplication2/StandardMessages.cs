@@ -6,6 +6,9 @@ namespace LibraryApplication2
 {
     public class StandardMessages
     {
+        /// <summary>
+        /// prints the header of the application
+        /// </summary>
         public static void Header()
         {
             Console.Clear();
@@ -16,86 +19,79 @@ namespace LibraryApplication2
             Console.WriteLine("======================================================================\n\n");
         }
 
-        public static void ExitMessage()
+        public static void SelectMemberToDelete()
         {
-            Console.WriteLine("Thank for now, please come again!");
-            Console.ReadLine();
-        }
-
-        public static void ItemReturned(string itemType)
-        {
-            Console.WriteLine($"Your {itemType} has been returned");
-            Console.ReadLine();
-        }
-
-        public static void SelectItemToDelete(string item, string deleteOrUpdate)
-        {
-            Console.Write($"Select a {item} to {deleteOrUpdate} by index number or 0 to exit: ");
+            Console.Write($"Select a member to delete by index number or 0 to exit: ");
         
         }
 
-        public static void NothingToReturn(string item)
-        {
-            Console.WriteLine($"There is no {item} to return");
-            Console.ReadLine();
-        }
-
+        /// <summary>
+        /// prints the object that was deletet in a message
+        /// </summary>
+        /// <param name="item">the type of object</param>
         public static void DeletedMessage(string item)
         {
             Console.WriteLine($"The {item} was deleted");
             Console.ReadLine();
         }
+
+        /// <summary>
+        /// prints the object that was created in a message
+        /// </summary>
+        /// <param name="item">the type of object</param>
         public static void WasCreatedMessage(string item)
         {
             Console.WriteLine($"You've created a new {item}");
             Console.ReadLine();
         }
+
+        /// <summary>
+        /// prints create header
+        /// </summary>
+        /// <param name="item">type of item object</param>
         public static void CreateMessage(string item)
         {
             Header();
             Console.WriteLine($"========== Create {item}! ==========");
         }
+        /// <summary>
+        /// prints the object that was updated in a message
+        /// </summary>
+        /// <param name="item"></param>
         public static void UpdatedMessage(string item)
         {
             Console.WriteLine($"Your {item} has been updated");
             Console.ReadLine();
         }
+        /// <summary>
+        /// prints a choose a book or a movie message
+        /// </summary>
         public static void BookOrMovieMessage()
         {
             Console.Write($"Do you want to Create a [B]ook or a [M]ovie? ");
         }
-
+        /// <summary>
+        /// prints a message that the users input was invalid
+        /// </summary>
         internal static void InvalidOption()
         {
             Console.WriteLine("You selected an invalid option");
             Console.ReadLine();
         }
 
-        public static void LoanComplete(string name, DateTime endDate)
-        {
-            var outputDate = endDate.ToString("yyyy-MM-dd");
-            Console.WriteLine($"You borrowed {name}, please return it before {outputDate}, thanks!");
-            Console.ReadLine();
-        }
-
+        /// <summary>
+        /// prints that the users input was out of bounds
+        /// </summary>
         public static void OutOfRange()
         {
             Console.WriteLine("Your selected index number was out of range!");
             Console.ReadLine();
         }
 
-        public static void OutOfCopies()
-        {
-            Console.WriteLine("Your Item has no available copies, do you want to reserve another date?");
-            Console.Write("Press enter if you do... [0] if you want to exit: ");
-            
-        }
-
-        public static void ListAllItems(string item)
-        {
-            Header();
-            Console.WriteLine($"========== List of all {item} in the database ==========\n");
-        }
+        /// <summary>
+        /// Lets the user select an option to print a list of
+        /// </summary>
+        /// <param name="listOption"></param>
         public static void SelectList(string listOption)
         {
             Header();
@@ -104,6 +100,10 @@ namespace LibraryApplication2
             Console.WriteLine("2. Movies");
             Console.WriteLine("3. Members");
         }
+        /// <summary>
+        /// lets the user select an item to return
+        /// </summary>
+        /// <param name="listOption"></param>
         public static void SelectItem(string listOption)
         {
             Header();

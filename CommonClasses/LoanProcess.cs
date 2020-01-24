@@ -1,12 +1,10 @@
-﻿using System;
+﻿using LibraryRepository.Models;
+using LibraryRepository.Repositories;
+using System;
 using System.Collections.Generic;
 using System.Text;
-using LibraryRepository;
-using LibraryRepository.Database;
-using LibraryRepository.Models;
-using LibraryRepository.Repositories;
 
-namespace LibraryApplication2
+namespace CommonClasses
 {
     public class LoanProcess
     {

@@ -1,10 +1,12 @@
-﻿using System;
+﻿using LibraryRepository.Models;
+using LibraryRepository.Repositories;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace LibraryApplication2
 {
-    class Validations
+    public class Validations
     {
         public static bool SelectedIndex(int indexSelected, int i, int count)
         {
@@ -87,6 +89,20 @@ namespace LibraryApplication2
             }
 
             return validDate;
+        }
+
+        public static bool UserName(string userName)
+        {
+            bool validUserName = false;
+            List<Member> members = MemberRepository.GetMembers();
+            foreach (Member member in members)
+            {
+                if (member.Name == userName)
+                {
+                    validUserName = true;
+                }
+            }
+            return validUserName;
         }
 
 

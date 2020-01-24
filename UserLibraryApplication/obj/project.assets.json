@@ -1634,10 +1634,25 @@
           "lib/netstandard1.3/System.Threading.ThreadPool.dll": {}
         }
       },
+      "CommonClasses/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "LibraryRepository": "1.0.0",
+          "Microsoft.NETCore.App": "2.1.0"
+        },
+        "compile": {
+          "bin/placeholder/CommonClasses.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CommonClasses.dll": {}
+        }
+      },
       "LibraryApplication2/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
+          "CommonClasses": "1.0.0",
           "LibraryRepository": "1.0.0",
           "Microsoft.NETCore.App": "2.1.0"
         },
@@ -5691,6 +5706,11 @@
         "system.threading.threadpool.nuspec"
       ]
     },
+    "CommonClasses/1.0.0": {
+      "type": "project",
+      "path": "../CommonClasses/CommonClasses.csproj",
+      "msbuildProject": "../CommonClasses/CommonClasses.csproj"
+    },
     "LibraryApplication2/1.0.0": {
       "type": "project",
       "path": "../LibraryApplication2/LibraryApplication2.csproj",
@@ -5710,23 +5730,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\melfas\\.nuget\\packages\\": {},
+    "C:\\Users\\danie\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\melfas\\Documents\\GitHub\\libben-2\\UserLibraryApplication\\UserLibraryApplication.csproj",
+      "projectUniqueName": "C:\\Users\\danie\\source\\repos\\libben-2\\UserLibraryApplication\\UserLibraryApplication.csproj",
       "projectName": "UserLibraryApplication",
-      "projectPath": "C:\\Users\\melfas\\Documents\\GitHub\\libben-2\\UserLibraryApplication\\UserLibraryApplication.csproj",
-      "packagesPath": "C:\\Users\\melfas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\melfas\\Documents\\GitHub\\libben-2\\UserLibraryApplication\\obj\\",
+      "projectPath": "C:\\Users\\danie\\source\\repos\\libben-2\\UserLibraryApplication\\UserLibraryApplication.csproj",
+      "packagesPath": "C:\\Users\\danie\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\danie\\source\\repos\\libben-2\\UserLibraryApplication\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\melfas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\danie\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5739,11 +5759,11 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\melfas\\Documents\\GitHub\\libben-2\\LibraryApplication2\\LibraryApplication2.csproj": {
-              "projectPath": "C:\\Users\\melfas\\Documents\\GitHub\\libben-2\\LibraryApplication2\\LibraryApplication2.csproj"
+            "C:\\Users\\danie\\source\\repos\\libben-2\\LibraryApplication2\\LibraryApplication2.csproj": {
+              "projectPath": "C:\\Users\\danie\\source\\repos\\libben-2\\LibraryApplication2\\LibraryApplication2.csproj"
             },
-            "C:\\Users\\melfas\\Documents\\GitHub\\libben-2\\LibraryRepository\\LibraryRepository.csproj": {
-              "projectPath": "C:\\Users\\melfas\\Documents\\GitHub\\libben-2\\LibraryRepository\\LibraryRepository.csproj"
+            "C:\\Users\\danie\\source\\repos\\libben-2\\LibraryRepository\\LibraryRepository.csproj": {
+              "projectPath": "C:\\Users\\danie\\source\\repos\\libben-2\\LibraryRepository\\LibraryRepository.csproj"
             }
           }
         }

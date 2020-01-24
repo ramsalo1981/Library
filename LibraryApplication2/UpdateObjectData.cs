@@ -10,30 +10,8 @@ namespace LibraryApplication2
 {
     public class UpdateObjectData
     {
-        public static void UpdateBookLoan(Member member)
-        {
-            Loan loanToReturn = SelectLoanById.SelectBookLoan(member);
-            
-            if (loanToReturn != null)
-            {
-                DateTime returnDate = DateTime.Today;
-                LoanRepository.ReturnBook(loanToReturn, returnDate);
-
-                StandardMessages.ItemReturned("book");
-            }
-        }
-        public static void UpdateMovieLoan(Member member)
-        {
-            Loan loanToReturn = SelectLoanById.SelectMovieLoan(member);
-            if (loanToReturn != null)
-            {
-                DateTime returnDate = DateTime.Today;
-                LoanRepository.ReturnMovie(loanToReturn, returnDate);
-
-                StandardMessages.ItemReturned("movie");
-            }
-        }
-        private static void UpdateMember()
+        
+        public static void UpdateMember()
         {
             Member memberToUpdate = SelectMemberById.SelectMember("update");
             if (memberToUpdate != null)
@@ -47,9 +25,9 @@ namespace LibraryApplication2
                 StandardMessages.UpdatedMessage("member");
             }
         }
-        private static void UpdateBook()
+        public static void UpdateBook()
         {
-            Book bookToUpdate = SelectBookById.SelectBook("update");
+            Book bookToUpdate = CommonClasses.SelectBookById.SelectBook("update");
             if (bookToUpdate != null)
             {
                 Console.Write("Name of the Item: ");
@@ -84,9 +62,9 @@ namespace LibraryApplication2
             }
 
         }
-        private static void UpdateMovie()
+        public static void UpdateMovie()
         {
-            Movie movieToUpdate = SelectMovieById.SelectMovie("update");
+            Movie movieToUpdate = CommonClasses.SelectMovieById.SelectMovie("update");
 
             if (movieToUpdate != null)
             {
@@ -123,25 +101,6 @@ namespace LibraryApplication2
                 StandardMessages.UpdatedMessage("movie");
             }
         }
-        public static void UpdateSwitch()
-        {
-            StandardMessages.SelectList("Update");
-            string input = Console.ReadLine();
-            switch (input)
-            {
-                case "1":
-                    UpdateBook();
-                    break;
-                case "2":
-                    UpdateMovie();
-                    break;
-                case "3":
-                    UpdateMember();
-                    break;
-                default:
-                    Console.WriteLine("Invalid Option");
-                    break;
-            }
-        }
+        
     }
 }

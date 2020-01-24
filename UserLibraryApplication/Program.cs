@@ -9,6 +9,7 @@ namespace UserLibraryApplication
 
             UserLibraryApp libraryApp = new UserLibraryApp();
             libraryApp.Start();
+            CommonClasses.StandardMessages.ExitMessage();
         }
     }
 }

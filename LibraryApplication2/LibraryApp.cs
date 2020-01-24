@@ -8,7 +8,7 @@ namespace LibraryApplication2
         {
             MainMenu mainMenu = new MainMenu();
             mainMenu.MainChoiceMenu();
-            StandardMessages.ExitMessage();
+            CommonClasses.StandardMessages.ExitMessage();
         }
     }
 }

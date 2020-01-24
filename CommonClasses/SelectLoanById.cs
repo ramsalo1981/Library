@@ -1,18 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using LibraryRepository;
-using LibraryRepository.Database;
 using LibraryRepository.Models;
 using LibraryRepository.Repositories;
 
-namespace LibraryApplication2
+namespace CommonClasses
 {
-    class SelectLoanById
+    public class SelectLoanById
     {
         public static Loan SelectBookLoan(Member member)
         {
-            //Book book = SelectBookById.SelectBook("return");
             List<Book> book = BookRepository.GetBooks();
             if (book.Count > 0)
             {
@@ -31,7 +28,6 @@ namespace LibraryApplication2
                 if (input != "0")
                 {
                     int index = Validations.ParseInt(input);
-                    index = Validations.TryAgain(index);
 
                     bool isValid = Validations.SelectedIndex(index, i, loans.Count);
                     if (isValid)
@@ -41,6 +37,7 @@ namespace LibraryApplication2
                     else
                     {
                         StandardMessages.InvalidOption();
+                        input = Console.ReadLine();
                         return null;
                     }
                 }

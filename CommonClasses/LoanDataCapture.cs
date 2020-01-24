@@ -1,12 +1,10 @@
-﻿using MongoDB.Bson;
+﻿using LibraryRepository.Models;
+using MongoDB.Bson;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using LibraryRepository;
-using LibraryRepository.Database;
-using LibraryRepository.Models;
 
-namespace LibraryApplication2
+namespace CommonClasses
 {
     class LoanDataCapture
     {

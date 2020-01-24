@@ -1029,8 +1029,17 @@
           "System.Runtime.Handles": "4.3.0"
         }
       },
+      "CommonClasses/1.0.0": {
+        "dependencies": {
+          "LibraryRepository": "1.0.0"
+        },
+        "runtime": {
+          "CommonClasses.dll": {}
+        }
+      },
       "LibraryApplication2/1.0.0": {
         "dependencies": {
+          "CommonClasses": "1.0.0",
           "LibraryRepository": "1.0.0"
         },
         "runtime": {
@@ -1654,6 +1663,11 @@
       "sha512": "sha512-k/+g4b7vjdd4aix83sTgC9VG6oXYKAktSfNIJUNGxPEj7ryEOfzHHhfnmsZvjxawwcD9HyWXKCXmPjX8U4zeSw==",
       "path": "system.threading.threadpool/4.3.0",
       "hashPath": "system.threading.threadpool.4.3.0.nupkg.sha512"
+    },
+    "CommonClasses/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "LibraryApplication2/1.0.0": {
       "type": "project",

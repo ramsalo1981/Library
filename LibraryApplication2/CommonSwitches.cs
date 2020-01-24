@@ -1,6 +1,6 @@
 ﻿using LibraryRepository.Models;
+using CommonClasses;
 using System;
-using System.Collections.Generic;
 using System.Text;
 
 namespace LibraryApplication2
@@ -14,10 +14,10 @@ namespace LibraryApplication2
             switch (input)
             {
                 case "1":
-                    SelectBookById.DeleteBook();
+                    DeleteItem.DeleteBook();
                     break;
                 case "2":
-                    SelectMovieById.DeleteMovie();
+                    DeleteItem.DeleteMovie();
                     break;
                 case "3":
                     SelectMemberById.DeleteMember();
@@ -42,7 +42,7 @@ namespace LibraryApplication2
                     PrintListsFromDB.PrintMoviesList();
                     break;
                 case "3":
-                    PrintListsFromDB.PrintMembersList();
+                    PrintMembersFromDB.PrintMembersList();
                     break;
                 default:
                     StandardMessages.InvalidOption();
@@ -56,13 +56,33 @@ namespace LibraryApplication2
             switch (input)
             {
                 case "1":
-                    UpdateObjectData.UpdateBookLoan(member);
+                    CommonClasses.ReturnItem.UpdateBookLoan(member);
                     break;
                 case "2":
-                    UpdateObjectData.UpdateMovieLoan(member);
+                    CommonClasses.ReturnItem.UpdateMovieLoan(member);
                     break;
                 default:
                     StandardMessages.InvalidOption();
+                    break;
+            }
+        }
+        public static void UpdateSwitch()
+        {
+            StandardMessages.SelectList("Update");
+            string input = Console.ReadLine();
+            switch (input)
+            {
+                case "1":
+                    UpdateObjectData.UpdateBook();
+                    break;
+                case "2":
+                    UpdateObjectData.UpdateMovie();
+                    break;
+                case "3":
+                    UpdateObjectData.UpdateMember();
+                    break;
+                default:
+                    Console.WriteLine("Invalid Option");
                     break;
             }
         }

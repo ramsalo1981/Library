@@ -1,16 +1,13 @@
-﻿using System;
+﻿using LibraryRepository.Models;
+using LibraryRepository.Repositories;
+using System;
 using System.Collections.Generic;
 using System.Text;
-using LibraryRepository;
-using LibraryRepository.Database;
-using LibraryRepository.Models;
-using LibraryRepository.Repositories;
 
-namespace LibraryApplication2
+namespace CommonClasses
 {
-    class SelectBookById
+    public class SelectBookById
     {
-
         public static Book SelectBook(string updateOrDelete)
         {
             List<Book> books = BookRepository.GetBooks();
@@ -39,16 +36,5 @@ namespace LibraryApplication2
             }
 
         }
-        public static void DeleteBook()
-        {
-            Book book = SelectBook("delete");
-            if (book != null)
-            {
-                BookRepository.DeleteBook(book);
-                StandardMessages.DeletedMessage("book");
-            }
-
-        }
-       
     }
 }

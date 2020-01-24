@@ -5,6 +5,7 @@ using LibraryRepository;
 using LibraryRepository.Database;
 using LibraryRepository.Models;
 using LibraryRepository.Repositories;
+using CommonClasses;
 
 namespace LibraryApplication2
 {
@@ -13,8 +14,7 @@ namespace LibraryApplication2
         public static Member SelectMember(string updateOrDelete)
         {
             List<Member> members = MemberRepository.GetMembers();
-
-            StandardMessages.ListAllItems("members");
+            CommonClasses.StandardMessages.ListAllItems("members");
 
             int i = 1;
             foreach (Member member in members)
@@ -23,7 +23,7 @@ namespace LibraryApplication2
                 i++;
             }
 
-            StandardMessages.SelectItemToDelete("member", updateOrDelete);
+            StandardMessages.SelectMemberToDelete();
             string input = Console.ReadLine();
             int.TryParse(input, out int indexSelected);
 

@@ -26,15 +26,15 @@ namespace LibraryApplication2
                             CommonSwitches.DeleteSwitch();
                             break;
                         case "4":
-                            UpdateObjectData.UpdateSwitch();
+                            CommonSwitches.UpdateSwitch();
                             break;
                         case "5":
                             Member member = SelectMemberById.SelectMember("lend a book to");
-                            LoanProcess.BorrowABook(member);
+                            CommonClasses.LoanProcess.BorrowABook(member);
                             break;
                         case "6":
                             member = SelectMemberById.SelectMember("lend a book to");
-                            LoanProcess.BorrowAMovie(member);
+                            CommonClasses.LoanProcess.BorrowAMovie(member);
                             break;
                         case "7":
                             member = SelectMemberById.SelectMember("return a item");

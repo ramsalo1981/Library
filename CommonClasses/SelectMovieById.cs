@@ -1,18 +1,13 @@
-﻿using System;
+﻿using LibraryRepository.Models;
+using LibraryRepository.Repositories;
+using System;
 using System.Collections.Generic;
 using System.Text;
-using LibraryRepository;
-using LibraryRepository.Database;
-using LibraryRepository.Models;
-using LibraryRepository.Repositories;
 
-
-namespace LibraryApplication2
+namespace CommonClasses
 {
-    class SelectMovieById
+    public class SelectMovieById
     {
-        
-
         public static Movie SelectMovie(string updateOrDelete)
         {
             List<Movie> movies = MovieRepository.GetMovies();
@@ -43,15 +38,6 @@ namespace LibraryApplication2
             {
                 StandardMessages.NothingToReturn("movies");
                 return null;
-            }
-        }
-        public static void DeleteMovie()
-        {
-            Movie movie = SelectMovie("delete");
-            if (movie != null)
-            {
-                MovieRepository.DeleteMovie(movie);
-                StandardMessages.DeletedMessage("movie");
             }
         }
     }
