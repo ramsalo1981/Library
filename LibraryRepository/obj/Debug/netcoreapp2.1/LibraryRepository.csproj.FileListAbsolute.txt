@@ -1,6 +1,5 @@
 C:\Users\melfas\Documents\GitHub\libben-2\LibraryRepository\bin\Debug\netcoreapp2.1\LibraryRepository.deps.json
 C:\Users\melfas\Documents\GitHub\libben-2\LibraryRepository\bin\Debug\netcoreapp2.1\LibraryRepository.dll
-C:\Users\melfas\Documents\GitHub\libben-2\LibraryRepository\obj\Debug\netcoreapp2.1\LibraryRepository.csprojAssemblyReference.cache
 C:\Users\melfas\Documents\GitHub\libben-2\LibraryRepository\obj\Debug\netcoreapp2.1\LibraryRepository.csproj.CoreCompileInputs.cache
 C:\Users\melfas\Documents\GitHub\libben-2\LibraryRepository\obj\Debug\netcoreapp2.1\LibraryRepository.AssemblyInfoInputs.cache
 C:\Users\melfas\Documents\GitHub\libben-2\LibraryRepository\obj\Debug\netcoreapp2.1\LibraryRepository.AssemblyInfo.cs

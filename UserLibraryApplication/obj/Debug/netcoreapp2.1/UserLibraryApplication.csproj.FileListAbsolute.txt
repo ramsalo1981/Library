@@ -32,3 +32,5 @@ C:\Users\danie\source\repos\libben-2\UserLibraryApplication\obj\Debug\netcoreapp
 C:\Users\danie\source\repos\libben-2\UserLibraryApplication\obj\Debug\netcoreapp2.1\UserLibraryApplication.pdb
 C:\Users\danie\source\repos\libben-2\UserLibraryApplication\bin\Debug\netcoreapp2.1\CommonClasses.dll
 C:\Users\danie\source\repos\libben-2\UserLibraryApplication\bin\Debug\netcoreapp2.1\CommonClasses.pdb
+C:\Users\melfas\Documents\GitHub\libben-2\UserLibraryApplication\bin\Debug\netcoreapp2.1\CommonClasses.dll
+C:\Users\melfas\Documents\GitHub\libben-2\UserLibraryApplication\bin\Debug\netcoreapp2.1\CommonClasses.pdb

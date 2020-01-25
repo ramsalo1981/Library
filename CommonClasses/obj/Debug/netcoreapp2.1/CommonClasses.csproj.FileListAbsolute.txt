@@ -12,3 +12,17 @@ C:\Users\danie\source\repos\libben-2\CommonClasses\obj\Debug\netcoreapp2.1\Commo
 C:\Users\danie\source\repos\libben-2\CommonClasses\obj\Debug\netcoreapp2.1\CommonClasses.csproj.CopyComplete
 C:\Users\danie\source\repos\libben-2\CommonClasses\obj\Debug\netcoreapp2.1\CommonClasses.dll
 C:\Users\danie\source\repos\libben-2\CommonClasses\obj\Debug\netcoreapp2.1\CommonClasses.pdb
+C:\Users\melfas\Documents\GitHub\libben-2\CommonClasses\bin\Debug\netcoreapp2.1\CommonClasses.deps.json
+C:\Users\melfas\Documents\GitHub\libben-2\CommonClasses\bin\Debug\netcoreapp2.1\CommonClasses.runtimeconfig.json
+C:\Users\melfas\Documents\GitHub\libben-2\CommonClasses\bin\Debug\netcoreapp2.1\CommonClasses.runtimeconfig.dev.json
+C:\Users\melfas\Documents\GitHub\libben-2\CommonClasses\bin\Debug\netcoreapp2.1\CommonClasses.dll
+C:\Users\melfas\Documents\GitHub\libben-2\CommonClasses\bin\Debug\netcoreapp2.1\CommonClasses.pdb
+C:\Users\melfas\Documents\GitHub\libben-2\CommonClasses\bin\Debug\netcoreapp2.1\LibraryRepository.dll
+C:\Users\melfas\Documents\GitHub\libben-2\CommonClasses\bin\Debug\netcoreapp2.1\LibraryRepository.pdb
+C:\Users\melfas\Documents\GitHub\libben-2\CommonClasses\obj\Debug\netcoreapp2.1\CommonClasses.csprojAssemblyReference.cache
+C:\Users\melfas\Documents\GitHub\libben-2\CommonClasses\obj\Debug\netcoreapp2.1\CommonClasses.csproj.CoreCompileInputs.cache
+C:\Users\melfas\Documents\GitHub\libben-2\CommonClasses\obj\Debug\netcoreapp2.1\CommonClasses.AssemblyInfoInputs.cache
+C:\Users\melfas\Documents\GitHub\libben-2\CommonClasses\obj\Debug\netcoreapp2.1\CommonClasses.AssemblyInfo.cs
+C:\Users\melfas\Documents\GitHub\libben-2\CommonClasses\obj\Debug\netcoreapp2.1\CommonClasses.csproj.CopyComplete
+C:\Users\melfas\Documents\GitHub\libben-2\CommonClasses\obj\Debug\netcoreapp2.1\CommonClasses.dll
+C:\Users\melfas\Documents\GitHub\libben-2\CommonClasses\obj\Debug\netcoreapp2.1\CommonClasses.pdb

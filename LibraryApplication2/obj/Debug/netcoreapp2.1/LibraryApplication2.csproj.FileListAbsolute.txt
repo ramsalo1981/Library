@@ -39,3 +39,5 @@ C:\Users\danie\source\repos\libben-2\LibraryApplication2\bin\Debug\netcoreapp2.1
 C:\Users\danie\source\repos\libben-2\LibraryApplication2\obj\Debug\netcoreapp2.1\LibraryApplication2.csproj.CopyComplete
 C:\Users\danie\source\repos\libben-2\LibraryApplication2\bin\Debug\netcoreapp2.1\CommonClasses.dll
 C:\Users\danie\source\repos\libben-2\LibraryApplication2\bin\Debug\netcoreapp2.1\CommonClasses.pdb
+C:\Users\melfas\Documents\GitHub\libben-2\LibraryApplication2\bin\Debug\netcoreapp2.1\CommonClasses.dll
+C:\Users\melfas\Documents\GitHub\libben-2\LibraryApplication2\bin\Debug\netcoreapp2.1\CommonClasses.pdb

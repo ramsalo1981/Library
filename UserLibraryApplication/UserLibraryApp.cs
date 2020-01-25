@@ -23,7 +23,7 @@ namespace UserLibraryApplication
             while (true)
             {
 
-            bool validUsername =  LibraryApplication2.Validations.UserName(input);
+            bool validUsername =  Validations.UserName(input);
             if (!validUsername)
             {
                     Console.WriteLine("Invalid Member Name, please try again");
@@ -87,9 +87,9 @@ namespace UserLibraryApplication
             Console.WriteLine("[3] List All Movies");
             Console.WriteLine("[4] Borrow a Movie");
             Console.WriteLine("[5] Return Book");
-            //Console.WriteLine("[6] Borrow a Movie");
-            //Console.WriteLine("[7] Return Item");
-            //Console.WriteLine("[8] All lists in Database");
+            //Console.WriteLine("[6] ");
+            //Console.WriteLine("[7] ");
+            //Console.WriteLine("[8] ");
             //Console.WriteLine("[9] ");
             Console.WriteLine("[0] Exit");
         }
