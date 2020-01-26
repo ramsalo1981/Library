@@ -15,3 +15,4 @@ C:\Users\danie\source\repos\libben-2\LibraryRepository\obj\Debug\netcoreapp2.1\L
 C:\Users\danie\source\repos\libben-2\LibraryRepository\obj\Debug\netcoreapp2.1\LibraryRepository.AssemblyInfo.cs
 C:\Users\danie\source\repos\libben-2\LibraryRepository\obj\Debug\netcoreapp2.1\LibraryRepository.dll
 C:\Users\danie\source\repos\libben-2\LibraryRepository\obj\Debug\netcoreapp2.1\LibraryRepository.pdb
+C:\Users\melfas\Documents\GitHub\libben-2\LibraryRepository\obj\Debug\netcoreapp2.1\LibraryRepository.csprojAssemblyReference.cache

@@ -18,13 +18,11 @@ namespace LibraryRepository.Repositories
             BookHandlers bh = new BookHandlers();
             bh.DeleteBookById(book);
         }
-
         public static void SaveBookToDB(Book book)
         {
             BookHandlers bh = new BookHandlers();
             bh.SaveBookToDB(book);
         }
-
         public static void UpdateBook(Book bookToUpdate, Book updatedBook)
         {
             BookHandlers bh = new BookHandlers();

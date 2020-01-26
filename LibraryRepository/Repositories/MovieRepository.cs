@@ -19,13 +19,11 @@ namespace LibraryRepository.Repositories
             MovieHandlers mh = new MovieHandlers();
             mh.DeleteMovieById(movie);
         }
-
         public static void SaveMovieToDB(Movie movie)
         {
             MovieHandlers mh = new MovieHandlers();
             mh.SaveMovieToDB(movie);
         }
-
         public static void UpdateMovie(Movie movieToUpdate, Movie updatedMovie)
         {
             MovieHandlers mh = new MovieHandlers();

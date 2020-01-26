@@ -65,7 +65,7 @@ namespace LibraryApplication2
         }
         public static void ReturnItemMenu()
         {
-            Member member = SelectMemberById.SelectMember("return a item");
+            Member member = SelectMemberById.SelectMember("return an item");
             if (member != null)
             {
                 MenuSwitches.ReturnItem(member);

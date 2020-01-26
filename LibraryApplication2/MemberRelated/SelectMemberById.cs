@@ -11,10 +11,11 @@ namespace LibraryApplication2
 {
     class SelectMemberById
     {
-        public static Member SelectMember(string updateOrDelete)
+        public static Member SelectMember(string option)
         {
             List<Member> members = MemberRepository.GetMembers();
             CommonClasses.StandardMessages.ListAllItems("members");
+            CommonClasses.StandardMessages.ChooseMemberOptions(option);
 
             int i = 1;
             foreach (Member member in members)

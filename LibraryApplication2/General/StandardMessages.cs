@@ -21,7 +21,7 @@ namespace LibraryApplication2
 
         public static void SelectMemberToDelete()
         {
-            Console.Write($"Select a member to delete by index number or 0 to exit: ");
+            Console.Write($"\nSelect a member to delete by index number or 0 to exit: ");
         
         }
 
@@ -31,7 +31,7 @@ namespace LibraryApplication2
         /// <param name="item">the type of object</param>
         public static void DeletedMessage(string item)
         {
-            Console.WriteLine($"The {item} was deleted");
+            Console.WriteLine($"\nThe {item} was deleted");
             Console.ReadLine();
         }
 
@@ -41,7 +41,7 @@ namespace LibraryApplication2
         /// <param name="item">the type of object</param>
         public static void WasCreatedMessage(string item)
         {
-            Console.WriteLine($"You've created a new {item}");
+            Console.WriteLine($"\nYou've created a new {item}");
             Console.ReadLine();
         }
 
@@ -52,7 +52,7 @@ namespace LibraryApplication2
         public static void CreateMessage(string item)
         {
             Header();
-            Console.WriteLine($"========== Create {item}! ==========");
+            Console.WriteLine($"========== Create {item}! ==========\n");
         }
 
         /// <summary>
@@ -61,7 +61,7 @@ namespace LibraryApplication2
         /// <param name="item">the type of object</param>
         public static void UpdatedMessage(string item)
         {
-            Console.WriteLine($"Your {item} has been updated");
+            Console.WriteLine($"\nYour {item} has been updated");
             Console.ReadLine();
         }
 

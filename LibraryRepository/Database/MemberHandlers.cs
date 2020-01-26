@@ -16,11 +16,11 @@ namespace LibraryRepository.Database
             MongoClient dbClient = new MongoClient();
             _database = dbClient.GetDatabase(dbName);
         }
+
         public void SaveMemberToDB(Member member)
         {
             var collection = _database.GetCollection<Member>(MEMBERS_COLLECTION);
             collection.InsertOne(member);
-            
         }
         public List<Member> GetMembersFromDB()
         {

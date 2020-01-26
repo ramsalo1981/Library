@@ -18,6 +18,12 @@ namespace CommonClasses
             Console.WriteLine("*********              -------------------                   *********");
             Console.WriteLine("======================================================================\n\n");
         }
+
+        public static void ChooseMemberOptions(string option)
+        {
+            Console.WriteLine($"Select a member to {option}\n");
+        }
+
         public static void ItemReturned(string itemType)
         {
             Console.WriteLine($"Your {itemType} has been returned");
@@ -69,7 +75,7 @@ namespace CommonClasses
         }
         public static void ExitMessage()
         {
-            Console.WriteLine("Thank for now, please come again!");
+            Console.WriteLine("Thanks for now, please come again!");
             Console.ReadLine();
         }
     }

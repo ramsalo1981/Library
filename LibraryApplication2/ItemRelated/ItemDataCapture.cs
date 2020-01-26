@@ -1,11 +1,6 @@
 ﻿using LibraryRepository.Models;
-using LibraryRepository.Database;
 using MongoDB.Bson;
 using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Text;
-using LibraryRepository.Repositories;
 using CommonClasses;
 using LibraryRepository.Factory;
 

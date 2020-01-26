@@ -19,13 +19,11 @@ namespace LibraryRepository.Repositories
             MemberHandlers mh = new MemberHandlers();
             mh.DeleteMemberById(member);
         }
-
         public static void SaveMemberToDB(Member member)
         {
             MemberHandlers mh = new MemberHandlers();
-            mh.DeleteMemberById(member);
+            mh.SaveMemberToDB(member);
         }
-
         public static void UpdateMember(ObjectId id, string name, int age)
         {
             MemberHandlers mh = new MemberHandlers();

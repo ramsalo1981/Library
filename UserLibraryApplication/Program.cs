@@ -6,7 +6,6 @@ namespace UserLibraryApplication
     {
         static void Main(string[] args)
         {
-
             UserLibraryApp libraryApp = new UserLibraryApp();
             libraryApp.Start();
             CommonClasses.StandardMessages.ExitMessage();
