@@ -19,16 +19,17 @@ namespace CommonClasses
         /// <returns>true if the selectedIndex is valid, otherwise false</returns>
         public static bool SelectedIndex(int indexSelected, int i, int count)
         {
+
             if (indexSelected == 0)
             {
                 return false;
             }
-            else if (indexSelected > i - 1)
+            else if (indexSelected > i)
             {
                 StandardMessages.OutOfRange();
                 return false;
             }
-            else if (count > 1)
+            else if (count >= 1)
             {
                 return true;
             }

@@ -8,6 +8,11 @@
         public string Genre { get; set; }
         public int NumberOfCopies { get; set; }
 
+        public Item()
+        {
+
+        }
+
         public Item(string name, string type, int releseYear, string genre, int numberOfCopies)
         {
             Name = name;

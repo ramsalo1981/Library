@@ -23,6 +23,10 @@ namespace CommonClasses
 
                 StandardMessages.ItemReturned("book");
             }
+            else
+            {
+                StandardMessages.NothingToReturn("books");
+            }
         }
 
         /// <summary>
@@ -38,6 +42,10 @@ namespace CommonClasses
                 LoanRepository.ReturnMovie(loanToReturn, returnDate);
 
                 StandardMessages.ItemReturned("movie");
+            }
+            else
+            {
+                StandardMessages.NothingToReturn("movies");
             }
         }
     }

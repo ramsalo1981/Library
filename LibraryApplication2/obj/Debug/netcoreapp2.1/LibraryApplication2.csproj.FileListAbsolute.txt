@@ -26,7 +26,6 @@ C:\Users\melfas\Documents\GitHub\libben-2\LibraryApplication2\bin\Debug\netcorea
 C:\Users\melfas\Documents\GitHub\libben-2\LibraryApplication2\bin\Debug\netcoreapp2.1\LibraryApplication2.dll
 C:\Users\melfas\Documents\GitHub\libben-2\LibraryApplication2\bin\Debug\netcoreapp2.1\LibraryApplication2.pdb
 C:\Users\melfas\Documents\GitHub\libben-2\LibraryApplication2\obj\Debug\netcoreapp2.1\LibraryApplication2.csprojAssemblyReference.cache
-C:\Users\melfas\Documents\GitHub\libben-2\LibraryApplication2\obj\Debug\netcoreapp2.1\LibraryApplication2.csproj.CoreCompileInputs.cache
 C:\Users\melfas\Documents\GitHub\libben-2\LibraryApplication2\obj\Debug\netcoreapp2.1\LibraryApplication2.AssemblyInfoInputs.cache
 C:\Users\melfas\Documents\GitHub\libben-2\LibraryApplication2\obj\Debug\netcoreapp2.1\LibraryApplication2.AssemblyInfo.cs
 C:\Users\melfas\Documents\GitHub\libben-2\LibraryApplication2\obj\Debug\netcoreapp2.1\LibraryApplication2.dll

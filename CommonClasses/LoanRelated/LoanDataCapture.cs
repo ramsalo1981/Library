@@ -20,7 +20,7 @@ namespace CommonClasses
         internal static Loan LoanBook(Member member, Book book, DateTime date)
         {
             DateTime startDate = date;
-            DateTime endDate = date.AddMonths(3);
+            DateTime endDate = date.AddMonths(1);
             Loan loan = Factory.CreateLoan(startDate, endDate, member);
             loan.BookArticle = book;
 
@@ -53,7 +53,7 @@ namespace CommonClasses
         internal static Loan LoanMovie(Member member, Movie movie, DateTime date)
         {
             DateTime startDate = date;
-            DateTime endDate = date.AddMonths(3);
+            DateTime endDate = date.AddMonths(1);
 
             Loan loan = Factory.CreateLoan(startDate, endDate, member);
             loan.MovieArticle = movie;

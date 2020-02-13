@@ -41,7 +41,6 @@ namespace CommonClasses
             }
             else
             {
-                StandardMessages.NothingToReturn("movies");
                 return null;
             }
         }
