@@ -48,7 +48,7 @@ namespace LibraryApplication2
             Member member = SelectMember("delete");
             if (member != null)
             {
-                MemberRepository.DeleteMember(member);
+                MemberRepository.DeleteMember(member.Id);
                 StandardMessages.DeletedMessage("member");
             }
         }

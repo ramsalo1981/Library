@@ -1,4 +1,5 @@
 ﻿using LibraryRepository.Models;
+using MongoDB.Bson;
 using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
@@ -10,7 +11,7 @@ namespace LibraryRepository.Database
     {
         private const string BOOKS_COLLECTION = "books";
         private readonly IMongoDatabase _database;
-        public BookHandlers(string dbName = "library-application2")
+        public BookHandlers(string dbName = "mvc-library-application")
         {
             MongoClient dbClient = new MongoClient();
             _database = dbClient.GetDatabase(dbName);
@@ -21,10 +22,16 @@ namespace LibraryRepository.Database
             collection.InsertOne(book);
         }
 
-        public void DeleteBookById(Book book)
+        internal Book GetBookByIdFromDB(ObjectId bookId)
         {
             var collection = _database.GetCollection<Book>(BOOKS_COLLECTION);
-            collection.DeleteOne(b => b.Id == book.Id);
+            return collection.Find(b => b.Id == bookId).First();
+        }
+
+        public void DeleteBookById(ObjectId bookId)
+        {
+            var collection = _database.GetCollection<Book>(BOOKS_COLLECTION);
+            collection.DeleteOne(b => b.Id == bookId);
         }
 
         public List<Book> GetBooksFromDB()
@@ -33,7 +40,7 @@ namespace LibraryRepository.Database
             var books = collection.Find<Book>(b => true).ToList();
             return books;
         }
-        public void UpdateBook(Book bookToUpdate, Book updatedBook)
+        public void UpdateBook(ObjectId bookToUpdateId, Book updatedBook)
         {
             var collection = _database.GetCollection<Book>(BOOKS_COLLECTION);
             UpdateDefinition<Book> update = Builders<Book>.Update
@@ -42,7 +49,7 @@ namespace LibraryRepository.Database
                 .Set(b => b.Genre, updatedBook.Genre)
                 .Set(b => b.Author, updatedBook.Author)
                 .Set(b => b.Pages, updatedBook.Pages);
-            collection.UpdateOne(b => b.Id == bookToUpdate.Id, update);
+            collection.UpdateOne(b => b.Id == bookToUpdateId, update);
         }
     }
 }

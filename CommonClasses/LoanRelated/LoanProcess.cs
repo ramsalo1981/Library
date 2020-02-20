@@ -1,4 +1,5 @@
-﻿using LibraryRepository.Models;
+﻿using LibraryRepository.Factory;
+using LibraryRepository.Models;
 using LibraryRepository.Repositories;
 using System;
 using System.Collections.Generic;
@@ -17,14 +18,17 @@ namespace CommonClasses
             Book book = SelectBookById.SelectBook("lend");
             if (book != null && member != null)
             {
-                DateTime date = DateTime.Today;
+                DateTime startDate = DateTime.Today;
+                
                 bool newDate = true;
                 while (newDate)
                 {
-                    int availableBooks = CheckLoansToCopies.Book(book.Id, book.NumberOfCopies, date);
+                    DateTime endDate = startDate.AddMonths(1);
+
+                    int availableBooks = CheckLoansToCopies.Book(book.Id, book.NumberOfCopies, startDate, endDate);
                     if (availableBooks > 0)
                     {
-                        LoanProcessAvailableBooks(member, book, date);
+                        LoanProcessAvailableBooks(member, book, startDate, endDate);
                         newDate = false;
                     }
                     else
@@ -38,7 +42,7 @@ namespace CommonClasses
                         }
                         else
                         {
-                            date = LoanDataCapture.SelectNewDateBook(book.Id);
+                            startDate = SelectNewLoanDate.SelectNewDateBook(book.Id);
                         }
 
                     }
@@ -47,10 +51,11 @@ namespace CommonClasses
 
             }
         }
-        private static void LoanProcessAvailableBooks(Member member, Book book, DateTime date)
+        private static void LoanProcessAvailableBooks(Member member, Book book, DateTime startDate, DateTime endDate)
         {
-            Loan loan = LoanDataCapture.LoanBook(member, book, date);
-            LoanRepository.InsertBook(loan);
+            Loan loan = Factory.CreateLoan(startDate, endDate, member);
+            loan.BookArticle = book;
+            BookLoanRepository.InsertBookLoan(loan);
             StandardMessages.LoanComplete(book.Name, loan.EndDate);
         }
 
@@ -64,14 +69,16 @@ namespace CommonClasses
 
             if (movie != null && member != null)
             {
-                DateTime date = DateTime.Today;
+                DateTime startDate = DateTime.Today;
+
                 bool newDate = true;
                 while (newDate)
                 {
-                    int result = CheckLoansToCopies.Movie(movie.Id, movie.NumberOfCopies, date);
+                    DateTime endDate = startDate.AddMonths(1);
+                    int result = CheckLoansToCopies.Movie(movie.Id, movie.NumberOfCopies, startDate, endDate);
                     if (result > 0)
                     {
-                        LoanProcessAvailableMovies(member, movie, date);
+                        LoanProcessAvailableMovies(member, movie, startDate, endDate);
                         newDate = false;
                     }
                     else
@@ -85,17 +92,18 @@ namespace CommonClasses
                         }
                         else
                         {
-                            date = LoanDataCapture.SelectNewDateMovie(movie.Id);
+                            startDate = SelectNewLoanDate.SelectNewDateMovie(movie.Id);
                         }
 
                     }
                 }
             }
         }
-        private static void LoanProcessAvailableMovies(Member member, Movie movie, DateTime date)
+        private static void LoanProcessAvailableMovies(Member member, Movie movie, DateTime startDate, DateTime endDate)
         {
-            Loan loan = LoanDataCapture.LoanMovie(member, movie, date);
-            LoanRepository.InsertMovie(loan);
+            Loan loan = Factory.CreateLoan(startDate, endDate, member);
+            loan.MovieArticle = movie;
+            MovieLoanRepository.InsertMovie(loan);
             StandardMessages.LoanComplete(movie.Name, loan.EndDate);
         }
     }

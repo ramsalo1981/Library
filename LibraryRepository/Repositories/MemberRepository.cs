@@ -14,10 +14,10 @@ namespace LibraryRepository.Repositories
             MemberHandlers mh = new MemberHandlers();
             return mh.GetMembersFromDB();
         }
-        public static void DeleteMember(Member member)
+        public static void DeleteMember(ObjectId memberId)
         {
             MemberHandlers mh = new MemberHandlers();
-            mh.DeleteMemberById(member);
+            mh.DeleteMemberById(memberId);
         }
         public static void SaveMemberToDB(Member member)
         {
@@ -28,6 +28,12 @@ namespace LibraryRepository.Repositories
         {
             MemberHandlers mh = new MemberHandlers();
             mh.UpdateMember(id, name, age);
+        }
+
+        public static Member GetMemberById(ObjectId memberId)
+        {
+            MemberHandlers mh = new MemberHandlers();
+            return mh.GetMemberByIdFromDB(memberId);
         }
     }
 }

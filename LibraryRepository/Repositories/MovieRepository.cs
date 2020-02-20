@@ -14,20 +14,27 @@ namespace LibraryRepository.Repositories
             MovieHandlers mh = new MovieHandlers();
             return mh.GetMoviesFromDB();
         }
-        public static void DeleteMovie(Movie movie)
+        public static void DeleteMovie(ObjectId movieId)
         {
             MovieHandlers mh = new MovieHandlers();
-            mh.DeleteMovieById(movie);
+            mh.DeleteMovieById(movieId);
         }
         public static void SaveMovieToDB(Movie movie)
         {
             MovieHandlers mh = new MovieHandlers();
             mh.SaveMovieToDB(movie);
         }
-        public static void UpdateMovie(Movie movieToUpdate, Movie updatedMovie)
+
+        public static Movie GetMovieById(ObjectId movieId)
         {
             MovieHandlers mh = new MovieHandlers();
-            mh.UpdateMovie(movieToUpdate, updatedMovie);
+            return mh.GetMovieByIdFromDB(movieId);
+        }
+
+        public static void UpdateMovie(ObjectId movieToUpdateId, Movie updatedMovie)
+        {
+            MovieHandlers mh = new MovieHandlers();
+            mh.UpdateMovie(movieToUpdateId, updatedMovie);
         }
     }
 }

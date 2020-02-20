@@ -16,14 +16,14 @@ namespace CommonClasses
         /// <param name="numberOfCopies">number of copies of the chosen book</param>
         /// <param name="date">the selected start date</param>
         /// <returns>how many copies that remains</returns>
-        public static int Book(ObjectId bookId, int numberOfCopies, DateTime date)
+        public static int Book(ObjectId bookId, int numberOfCopies, DateTime startDate, DateTime endDate)
         {
-            List<Loan> loans = LoanRepository.GetBookLoansById(bookId);
+            List<Loan> loans = BookLoanRepository.GetBookLoansById(bookId);
 
             foreach (Loan loan in loans)
             {
-                int checkStartDate = Validations.CompareDates(date, loan.StartDate);
-                int checkEndDate = Validations.CompareDates(date, loan.EndDate);
+                int checkStartDate = Validations.CompareDates(startDate, loan.StartDate);
+                int checkEndDate = Validations.CompareDates(endDate, loan.EndDate);
 
                 if (checkStartDate >= 0 && checkEndDate <= 0)
                 {
@@ -31,7 +31,6 @@ namespace CommonClasses
                 }
                 else if (true)
                 {
-                    DateTime endDate = date.AddMonths(3);
                     checkStartDate = Validations.CompareDates(endDate, loan.StartDate);
                     checkEndDate = Validations.CompareDates(endDate, loan.EndDate);
 
@@ -51,13 +50,13 @@ namespace CommonClasses
         /// <param name="numberOfCopies">number of copies of the chosen movie</param>
         /// <param name="date">the selected start date</param>
         /// <returns>how many copies that remains</returns>
-        public static int Movie(ObjectId id, int numberOfCopies, DateTime date)
+        public static int Movie(ObjectId id, int numberOfCopies, DateTime startDate, DateTime endDate)
         {
-            List<Loan> loans = LoanRepository.GetMovieLoansById(id);
+            List<Loan> loans = MovieLoanRepository.GetMovieLoansById(id);
             foreach (Loan loan in loans)
             {
-                int checkStartDate = Validations.CompareDates(date, loan.StartDate);
-                int checkEndDate = Validations.CompareDates(date, loan.EndDate);
+                int checkStartDate = Validations.CompareDates(startDate, loan.StartDate);
+                int checkEndDate = Validations.CompareDates(endDate, loan.EndDate);
 
                 if (checkStartDate >= 0 && checkEndDate <= 0)
                 {
@@ -65,7 +64,6 @@ namespace CommonClasses
                 }
                 else if (true)
                 {
-                    DateTime endDate = date.AddMonths(3);
                     checkStartDate = Validations.CompareDates(endDate, loan.StartDate);
                     checkEndDate = Validations.CompareDates(endDate, loan.EndDate);
 

@@ -1,0 +1,8 @@
+C:\Users\melfas\Documents\GitHub\libben-2\LibraryRepository\bin\Debug\netcoreapp3.1\LibraryRepository.deps.json
+C:\Users\melfas\Documents\GitHub\libben-2\LibraryRepository\bin\Debug\netcoreapp3.1\LibraryRepository.dll
+C:\Users\melfas\Documents\GitHub\libben-2\LibraryRepository\bin\Debug\netcoreapp3.1\LibraryRepository.pdb
+C:\Users\melfas\Documents\GitHub\libben-2\LibraryRepository\obj\Debug\netcoreapp3.1\LibraryRepository.AssemblyInfoInputs.cache
+C:\Users\melfas\Documents\GitHub\libben-2\LibraryRepository\obj\Debug\netcoreapp3.1\LibraryRepository.AssemblyInfo.cs
+C:\Users\melfas\Documents\GitHub\libben-2\LibraryRepository\obj\Debug\netcoreapp3.1\LibraryRepository.dll
+C:\Users\melfas\Documents\GitHub\libben-2\LibraryRepository\obj\Debug\netcoreapp3.1\LibraryRepository.pdb
+C:\Users\melfas\Documents\GitHub\libben-2\LibraryRepository\obj\Debug\netcoreapp3.1\LibraryRepository.csprojAssemblyReference.cache

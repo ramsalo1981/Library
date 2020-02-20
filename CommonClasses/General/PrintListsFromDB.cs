@@ -19,7 +19,7 @@ namespace CommonClasses
             StandardMessages.ListAllItems("books");
             foreach (Book book in books)
             {
-                Console.WriteLine($"{book.Type} {book.Name} {book.ReleseYear} {book.Genre} {book.Author} {book.Pages}");
+                Console.WriteLine($"{book.Name} {book.ReleseYear} {book.Genre} {book.Author} {book.Pages}");
             }
             Console.WriteLine("\nPress enter to continue...");
             Console.ReadLine();
@@ -50,7 +50,7 @@ namespace CommonClasses
         /// <param name="id">book id of the wanted book</param>
         public static void PrintBookLoansList(ObjectId id)
         {
-            List<Loan> loans = LoanRepository.GetBookLoansById(id);
+            List<Loan> loans = BookLoanRepository.GetBookLoansById(id);
 
             StandardMessages.ListAllItems("loans");
             DateTime today = DateTime.Today;
@@ -74,7 +74,7 @@ namespace CommonClasses
         /// <param name="id">movie id of the wanted book</param>
         public static void PrintMovieLoansList(ObjectId id)
         {
-            List<Loan> loans = LoanRepository.GetMovieLoansById(id);
+            List<Loan> loans = MovieLoanRepository.GetMovieLoansById(id);
 
             StandardMessages.ListAllItems("loans");
             DateTime today = DateTime.Today;

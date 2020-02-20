@@ -13,7 +13,7 @@ namespace LibraryRepository.Models
 
         }
 
-        public Book(string name, string type, int releseYear, string genre, int numberOfCopies, string author, int pages) : base(name, type, releseYear, genre, numberOfCopies)
+        public Book(string name, int releseYear, string genre, int numberOfCopies, string author, int pages) : base(name, releseYear, genre, numberOfCopies)
         {
             Author = author;
             Pages = pages;

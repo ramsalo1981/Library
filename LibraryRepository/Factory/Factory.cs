@@ -13,15 +13,15 @@ namespace LibraryRepository.Factory
             return loan;
         }
 
-        public static Book CreateBook(string name, string type, int releseYear, string genre, int numberOfCopies, string author, int pages)
+        public static Book CreateBook(string name, int releseYear, string genre, int numberOfCopies, string author, int pages)
         {
-            Book book = new Book(name, type, releseYear, genre, numberOfCopies, author, pages);
+            Book book = new Book(name, releseYear, genre, numberOfCopies, author, pages);
             return book;
         }
 
-        public static Movie CreateMovie(string name, string type, int releseYear, string genre, int numberOfCopies, int duration, int ageLimit)
+        public static Movie CreateMovie(string name, int releseYear, string genre, int numberOfCopies, int duration, int ageLimit)
         {
-            Movie movie = new Movie(name, type, releseYear, genre, numberOfCopies, duration, ageLimit);
+            Movie movie = new Movie(name, releseYear, genre, numberOfCopies, duration, ageLimit);
             return movie;
         }
 

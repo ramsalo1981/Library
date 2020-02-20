@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Serilog;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -8,6 +9,7 @@ namespace CommonClasses
     {
         public static void Main(string[] args)
         {
+            
         }
     }
 }

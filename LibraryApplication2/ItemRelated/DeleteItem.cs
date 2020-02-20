@@ -17,7 +17,7 @@ namespace LibraryApplication2
             Book book = CommonClasses.SelectBookById.SelectBook("delete");
             if (book != null)
             {
-                BookRepository.DeleteBook(book);
+                BookRepository.DeleteBook(book.Id);
                 StandardMessages.DeletedMessage("book");
             }
 
@@ -31,7 +31,7 @@ namespace LibraryApplication2
             Movie movie = CommonClasses.SelectMovieById.SelectMovie("delete");
             if (movie != null)
             {
-                MovieRepository.DeleteMovie(movie);
+                MovieRepository.DeleteMovie(movie.Id);
                 StandardMessages.DeletedMessage("movie");
             }
         }

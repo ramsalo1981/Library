@@ -2,6 +2,7 @@
 using MongoDB.Bson.Serialization.Attributes;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 
 namespace LibraryRepository.Models
@@ -11,9 +12,11 @@ namespace LibraryRepository.Models
         public ObjectId Id { get; set; }
 
         [BsonDateTimeOptions(Kind = DateTimeKind.Local)]
+        [DataType(DataType.Date)]
         public DateTime StartDate { get; set; }
 
         [BsonDateTimeOptions(Kind = DateTimeKind.Local)]
+        [DataType(DataType.Date)]
         public DateTime EndDate { get; set; }
 
         public Member Member { get; set; }

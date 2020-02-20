@@ -17,7 +17,7 @@ namespace CommonClasses
             List<Book> book = BookRepository.GetBooks();
             if (book.Count > 0)
             {
-                List<Loan> loans = LoanRepository.GetBookLoans(member);
+                List<Loan> loans = BookLoanRepository.GetBookLoansByMember(member);
                 StandardMessages.ListAllItems("your book loans");
 
                 int i = 1;
@@ -68,7 +68,7 @@ namespace CommonClasses
 
             if (movie != null)
             {
-                List<Loan> loans = LoanRepository.GetMovieLoansByMember(member);
+                List<Loan> loans = MovieLoanRepository.GetMovieLoansByMember(member);
                 StandardMessages.ListAllItems("movie loans");
 
                 int i = 1;

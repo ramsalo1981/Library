@@ -39,7 +39,7 @@ namespace LibraryApplication2
             int pages = Validations.ParseInt(input);
             pages = Validations.TryAgain(pages);
 
-            Book book = Factory.CreateBook(name, "book", releseYear, genre, numberOfCopies, author, pages);
+            Book book = Factory.CreateBook(name, releseYear, genre, numberOfCopies, author, pages);
             return book;
         }
 
@@ -75,7 +75,7 @@ namespace LibraryApplication2
             int ageLimit = Validations.ParseInt(input);
             ageLimit = Validations.TryAgain(ageLimit);
 
-            Movie movie = Factory.CreateMovie(name, "movie", releseYear, genre, numberOfCopies, duration, ageLimit);
+            Movie movie = Factory.CreateMovie(name, releseYear, genre, numberOfCopies, duration, ageLimit);
             return movie;
         }
     }

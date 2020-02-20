@@ -11,7 +11,7 @@ namespace LibraryRepository.Database
     {
         private const string MEMBERS_COLLECTION = "members";
         private readonly IMongoDatabase _database;
-        public MemberHandlers(string dbName = "library-application2")
+        public MemberHandlers(string dbName = "mvc-library-application")
         {
             MongoClient dbClient = new MongoClient();
             _database = dbClient.GetDatabase(dbName);
@@ -29,11 +29,18 @@ namespace LibraryRepository.Database
             return members;
         }
 
-        public void DeleteMemberById(Member member)
+        public void DeleteMemberById(ObjectId memberId)
         {
             var collection = _database.GetCollection<Member>(MEMBERS_COLLECTION);
-            collection.DeleteOne(m => m.Id == member.Id);
+            collection.DeleteOne(m => m.Id == memberId);
         }
+
+        internal Member GetMemberByIdFromDB(ObjectId memberId)
+        {
+            var collection = _database.GetCollection<Member>(MEMBERS_COLLECTION);
+            return collection.Find(m => m.Id == memberId).First();
+        }
+
         public void UpdateMember(ObjectId id, string name, int age)
         {
             var collection = _database.GetCollection<Member>(MEMBERS_COLLECTION);

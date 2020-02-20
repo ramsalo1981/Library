@@ -1,6 +1,7 @@
 ﻿using CommonClasses;
 using LibraryRepository.Models;
 using LibraryRepository.Repositories;
+using MongoDB.Bson;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -31,7 +32,7 @@ namespace LibraryApplication2
             if (bookToUpdate != null)
             {
                 Book updatedBook = ItemDataCapture.Book();
-                BookRepository.UpdateBook(bookToUpdate, updatedBook);
+                BookRepository.UpdateBook(bookToUpdate.Id, updatedBook);
                 StandardMessages.UpdatedMessage("book");
             }
         }
@@ -42,7 +43,7 @@ namespace LibraryApplication2
             if (movieToUpdate != null)
             {
                 Movie updatedMovie = ItemDataCapture.Movie();
-                MovieRepository.UpdateMovie(movieToUpdate, updatedMovie);
+                MovieRepository.UpdateMovie(movieToUpdate.Id, updatedMovie);
                 StandardMessages.UpdatedMessage("movie");
             }
         }

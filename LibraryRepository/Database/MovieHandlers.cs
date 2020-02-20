@@ -1,4 +1,5 @@
 ﻿using LibraryRepository.Models;
+using MongoDB.Bson;
 using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
@@ -10,7 +11,7 @@ namespace LibraryRepository.Database
     {
         private const string MOVIES_COLLECTION = "movies";
         private readonly IMongoDatabase _database;
-        public MovieHandlers(string dbName = "library-application2")
+        public MovieHandlers(string dbName = "mvc-library-application")
         {
             MongoClient dbClient = new MongoClient();
             _database = dbClient.GetDatabase(dbName);
@@ -27,12 +28,18 @@ namespace LibraryRepository.Database
             return movies;
         }
 
-        public void DeleteMovieById(Movie movie)
+        internal Movie GetMovieByIdFromDB(ObjectId movieId)
         {
             var collection = _database.GetCollection<Movie>(MOVIES_COLLECTION);
-            collection.DeleteOne(m => m.Id == movie.Id);
+            return collection.Find(m => m.Id == movieId).First();
         }
-        public void UpdateMovie(Movie movieToUpdate, Movie updatedMovie)
+
+        public void DeleteMovieById(ObjectId movieId)
+        {
+            var collection = _database.GetCollection<Movie>(MOVIES_COLLECTION);
+            collection.DeleteOne(m => m.Id == movieId);
+        }
+        public void UpdateMovie(ObjectId movieToUpdateId, Movie updatedMovie)
         {
             var collection = _database.GetCollection<Movie>(MOVIES_COLLECTION);
             UpdateDefinition<Movie> update = Builders<Movie>.Update
@@ -41,7 +48,7 @@ namespace LibraryRepository.Database
                 .Set(m => m.Genre, updatedMovie.Genre)
                 .Set(m => m.Duration, updatedMovie.Duration)
                 .Set(m => m.AgeLimit, updatedMovie.AgeLimit);
-            collection.UpdateOne(m => m.Id == movieToUpdate.Id, update);
+            collection.UpdateOne(m => m.Id == movieToUpdateId, update);
         }
     }
 }

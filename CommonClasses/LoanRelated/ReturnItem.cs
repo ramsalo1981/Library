@@ -19,7 +19,7 @@ namespace CommonClasses
             if (loanToReturn != null)
             {
                 DateTime returnDate = DateTime.Today;
-                LoanRepository.ReturnBook(loanToReturn, returnDate);
+                BookLoanRepository.ReturnBook(loanToReturn, returnDate);
 
                 StandardMessages.ItemReturned("book");
             }
@@ -39,7 +39,7 @@ namespace CommonClasses
             if (loanToReturn != null)
             {
                 DateTime returnDate = DateTime.Today;
-                LoanRepository.ReturnMovie(loanToReturn, returnDate);
+                MovieLoanRepository.ReturnMovie(loanToReturn, returnDate);
 
                 StandardMessages.ItemReturned("movie");
             }

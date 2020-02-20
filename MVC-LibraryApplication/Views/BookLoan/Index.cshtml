@@ -1,0 +1,54 @@
+﻿@model IEnumerable<LibraryRepository.Models.Loan>
+
+@{
+    ViewData["Title"] = "Book Loans";
+}
+
+<h1>Book Loans</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Member)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BookArticle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StartDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EndDate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Member.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BookArticle.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StartDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EndDate)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { item.Id }) |
+                    @Html.ActionLink("Details", "Details", new { item.Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { item.Id })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
