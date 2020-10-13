@@ -21,8 +21,8 @@ namespace MVC_LibraryApplication.Controllers
         }
         public IActionResult Create()
         {
-            MovieLoanModel mlm = CreateMovieLoanModel();
-            return View(mlm);
+            MovieLoanModel movieLoanModel = new MovieLoanModel();
+            return View(movieLoanModel);
         }
 
         [HttpPost]
@@ -45,7 +45,7 @@ namespace MVC_LibraryApplication.Controllers
             {
                 SerilogMVC(movie);
                 string errorMessage = "No availiable copies at that date. Please try an other one";
-                MovieLoanModel movieLoanModel = CreateMovieLoanModel();
+                MovieLoanModel movieLoanModel = new MovieLoanModel();
                 movieLoanModel.ErrorMessage = errorMessage;
                 return View(movieLoanModel);
             }
@@ -73,8 +73,16 @@ namespace MVC_LibraryApplication.Controllers
         public IActionResult Delete(string id)
         {
             ObjectId loanId = new ObjectId(id);
-            MovieLoanRepository.DeleteMovieLoan(loanId);
+            Loan movieLoan = MovieLoanRepository.GetMovieLoanByMovieLoanId(loanId);
 
+            return View(movieLoan);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        public IActionResult ConfirmDelete(string id)
+        {
+            ObjectId movieLoanId = new ObjectId(id);
+            MovieLoanRepository.DeleteMovieLoan(movieLoanId);
             return Redirect("/MovieLoan");
         }
 
@@ -96,23 +104,6 @@ namespace MVC_LibraryApplication.Controllers
             loan.MovieArticle = movie;
 
             return loan;
-        }
-        private MovieLoanModel CreateMovieLoanModel()
-        {
-            MovieLoanModel mlm = new MovieLoanModel();
-            mlm.Members = GetMembers();
-            mlm.Movies = GetMovies();
-            return mlm;
-        }
-        private List<Member> GetMembers()
-        {
-            List<Member> members = MemberRepository.GetMembers();
-            return members;
-        }
-        private List<Movie> GetMovies()
-        {
-            List<Movie> movies = MovieRepository.GetMovies();
-            return movies;
         }
 
         public static void SerilogMVC(Movie movie)

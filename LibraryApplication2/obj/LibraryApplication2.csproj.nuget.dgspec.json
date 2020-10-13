@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\melfas\\Documents\\GitHub\\libben-2\\LibraryApplication2\\LibraryApplication2.csproj": {}
+    "C:\\Users\\ramis\\Desktop\\tuc\\programering c# fördjubning\\uppgifter\\uppgift10\\LibraryApplication\\LibraryApplication\\LibraryApplication2\\LibraryApplication2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\melfas\\Documents\\GitHub\\libben-2\\CommonClasses\\CommonClasses.csproj": {
+    "C:\\Users\\ramis\\Desktop\\tuc\\programering c# fördjubning\\uppgifter\\uppgift10\\LibraryApplication\\LibraryApplication\\CommonClasses\\CommonClasses.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\melfas\\Documents\\GitHub\\libben-2\\CommonClasses\\CommonClasses.csproj",
+        "projectUniqueName": "C:\\Users\\ramis\\Desktop\\tuc\\programering c# fördjubning\\uppgifter\\uppgift10\\LibraryApplication\\LibraryApplication\\CommonClasses\\CommonClasses.csproj",
         "projectName": "CommonClasses",
-        "projectPath": "C:\\Users\\melfas\\Documents\\GitHub\\libben-2\\CommonClasses\\CommonClasses.csproj",
-        "packagesPath": "C:\\Users\\melfas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\melfas\\Documents\\GitHub\\libben-2\\CommonClasses\\obj\\",
+        "projectPath": "C:\\Users\\ramis\\Desktop\\tuc\\programering c# fördjubning\\uppgifter\\uppgift10\\LibraryApplication\\LibraryApplication\\CommonClasses\\CommonClasses.csproj",
+        "packagesPath": "C:\\Users\\ramis\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ramis\\Desktop\\tuc\\programering c# fördjubning\\uppgifter\\uppgift10\\LibraryApplication\\LibraryApplication\\CommonClasses\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\melfas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ramis\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -30,8 +30,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\melfas\\Documents\\GitHub\\libben-2\\LibraryRepository\\LibraryRepository.csproj": {
-                "projectPath": "C:\\Users\\melfas\\Documents\\GitHub\\libben-2\\LibraryRepository\\LibraryRepository.csproj"
+              "C:\\Users\\ramis\\Desktop\\tuc\\programering c# fördjubning\\uppgifter\\uppgift10\\LibraryApplication\\LibraryApplication\\LibraryRepository\\LibraryRepository.csproj": {
+                "projectPath": "C:\\Users\\ramis\\Desktop\\tuc\\programering c# fördjubning\\uppgifter\\uppgift10\\LibraryApplication\\LibraryApplication\\LibraryRepository\\LibraryRepository.csproj"
               }
             }
           }
@@ -69,24 +69,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\melfas\\Documents\\GitHub\\libben-2\\LibraryApplication2\\LibraryApplication2.csproj": {
+    "C:\\Users\\ramis\\Desktop\\tuc\\programering c# fördjubning\\uppgifter\\uppgift10\\LibraryApplication\\LibraryApplication\\LibraryApplication2\\LibraryApplication2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\melfas\\Documents\\GitHub\\libben-2\\LibraryApplication2\\LibraryApplication2.csproj",
+        "projectUniqueName": "C:\\Users\\ramis\\Desktop\\tuc\\programering c# fördjubning\\uppgifter\\uppgift10\\LibraryApplication\\LibraryApplication\\LibraryApplication2\\LibraryApplication2.csproj",
         "projectName": "LibraryApplication2",
-        "projectPath": "C:\\Users\\melfas\\Documents\\GitHub\\libben-2\\LibraryApplication2\\LibraryApplication2.csproj",
-        "packagesPath": "C:\\Users\\melfas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\melfas\\Documents\\GitHub\\libben-2\\LibraryApplication2\\obj\\",
+        "projectPath": "C:\\Users\\ramis\\Desktop\\tuc\\programering c# fördjubning\\uppgifter\\uppgift10\\LibraryApplication\\LibraryApplication\\LibraryApplication2\\LibraryApplication2.csproj",
+        "packagesPath": "C:\\Users\\ramis\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ramis\\Desktop\\tuc\\programering c# fördjubning\\uppgifter\\uppgift10\\LibraryApplication\\LibraryApplication\\LibraryApplication2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\melfas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ramis\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -99,11 +99,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\melfas\\Documents\\GitHub\\libben-2\\CommonClasses\\CommonClasses.csproj": {
-                "projectPath": "C:\\Users\\melfas\\Documents\\GitHub\\libben-2\\CommonClasses\\CommonClasses.csproj"
+              "C:\\Users\\ramis\\Desktop\\tuc\\programering c# fördjubning\\uppgifter\\uppgift10\\LibraryApplication\\LibraryApplication\\CommonClasses\\CommonClasses.csproj": {
+                "projectPath": "C:\\Users\\ramis\\Desktop\\tuc\\programering c# fördjubning\\uppgifter\\uppgift10\\LibraryApplication\\LibraryApplication\\CommonClasses\\CommonClasses.csproj"
               },
-              "C:\\Users\\melfas\\Documents\\GitHub\\libben-2\\LibraryRepository\\LibraryRepository.csproj": {
-                "projectPath": "C:\\Users\\melfas\\Documents\\GitHub\\libben-2\\LibraryRepository\\LibraryRepository.csproj"
+              "C:\\Users\\ramis\\Desktop\\tuc\\programering c# fördjubning\\uppgifter\\uppgift10\\LibraryApplication\\LibraryApplication\\LibraryRepository\\LibraryRepository.csproj": {
+                "projectPath": "C:\\Users\\ramis\\Desktop\\tuc\\programering c# fördjubning\\uppgifter\\uppgift10\\LibraryApplication\\LibraryApplication\\LibraryRepository\\LibraryRepository.csproj"
               }
             }
           }
@@ -141,24 +141,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\melfas\\Documents\\GitHub\\libben-2\\LibraryRepository\\LibraryRepository.csproj": {
+    "C:\\Users\\ramis\\Desktop\\tuc\\programering c# fördjubning\\uppgifter\\uppgift10\\LibraryApplication\\LibraryApplication\\LibraryRepository\\LibraryRepository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\melfas\\Documents\\GitHub\\libben-2\\LibraryRepository\\LibraryRepository.csproj",
+        "projectUniqueName": "C:\\Users\\ramis\\Desktop\\tuc\\programering c# fördjubning\\uppgifter\\uppgift10\\LibraryApplication\\LibraryApplication\\LibraryRepository\\LibraryRepository.csproj",
         "projectName": "LibraryRepository",
-        "projectPath": "C:\\Users\\melfas\\Documents\\GitHub\\libben-2\\LibraryRepository\\LibraryRepository.csproj",
-        "packagesPath": "C:\\Users\\melfas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\melfas\\Documents\\GitHub\\libben-2\\LibraryRepository\\obj\\",
+        "projectPath": "C:\\Users\\ramis\\Desktop\\tuc\\programering c# fördjubning\\uppgifter\\uppgift10\\LibraryApplication\\LibraryApplication\\LibraryRepository\\LibraryRepository.csproj",
+        "packagesPath": "C:\\Users\\ramis\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ramis\\Desktop\\tuc\\programering c# fördjubning\\uppgifter\\uppgift10\\LibraryApplication\\LibraryApplication\\LibraryRepository\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\melfas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ramis\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -210,7 +210,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

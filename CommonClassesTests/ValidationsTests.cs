@@ -18,7 +18,7 @@ namespace CommonClassesTests
         }
 
         [TestMethod]
-        [DataRow("nina", true), DataRow("lolilolonen", false), DataRow("Daniel", true), DataRow("ROFLET", false)]
+        [DataRow("nina", false), DataRow("lolilolonen", false), DataRow("Daniel", true), DataRow("ROFLET", false)]
         public void UserNameTest(string input, bool expected)
         {
             bool result = Validations.UserName(input);

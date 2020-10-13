@@ -65,8 +65,16 @@ namespace MVC_LibraryApplication.Controllers
         public IActionResult Delete(string id)
         {
             ObjectId bookId = new ObjectId(id);
-            BookRepository.DeleteBook(bookId);
+            Book book = BookRepository.GetBookById(bookId);
 
+            return View(book);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        public IActionResult ConfirmDelete(string id)
+        {
+            ObjectId bookId = new ObjectId(id);
+            BookRepository.DeleteBook(bookId);
             return Redirect("/Book");
         }
     }

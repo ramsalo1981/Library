@@ -16,7 +16,7 @@ namespace CommonClassesTests
             DateTime date1 = DateTime.Today;
             DateTime date = date1.AddYears(1);
             Book book = SelectBookById.ValidateSelectedBook(selectedBook, i);
-            int result = CheckLoansToCopies.Book(book.Id, expected, date);
+            int result = CheckLoansToCopies.Book(book.Id, expected, date1, date);
             Assert.AreEqual(expected, result);
         }
     }

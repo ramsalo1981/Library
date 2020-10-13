@@ -56,8 +56,16 @@ namespace MVC_LibraryApplication.Controllers
         public IActionResult Delete(string id)
         {
             ObjectId movieId = new ObjectId(id);
-            MovieRepository.DeleteMovie(movieId);
+            Movie movie = MovieRepository.GetMovieById(movieId);
 
+            return View(movie);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        public IActionResult ConfirmDelete(string id)
+        {
+            ObjectId movieId = new ObjectId(id);
+            MovieRepository.DeleteMovie(movieId);
             return Redirect("/Movie");
         }
     }

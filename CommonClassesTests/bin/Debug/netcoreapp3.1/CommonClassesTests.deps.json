@@ -13,6 +13,7 @@
           "MSTest.TestAdapter": "1.3.2",
           "MSTest.TestFramework": "1.3.2",
           "Microsoft.NET.Test.Sdk": "15.9.0",
+          "Serilog": "2.9.0",
           "Serilog.Sinks.MongoDB": "4.0.0"
         },
         "runtime": {
@@ -1611,6 +1612,7 @@
       "LibraryRepository/1.0.0": {
         "dependencies": {
           "MongoDB.Driver": "2.10.1",
+          "Serilog": "2.9.0",
           "Serilog.Sinks.MongoDB": "4.0.0"
         },
         "runtime": {

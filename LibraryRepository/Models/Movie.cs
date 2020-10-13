@@ -10,6 +10,7 @@ namespace LibraryRepository.Models
         public ObjectId Id;
         public int Duration { get; set; }
         public int AgeLimit { get; set; }
+        public string PosterURL { get; set; }
         public Movie(string name, int releseYear, string genre, int numberOfCopies, int duration, int ageLimit) : base(name, releseYear, genre, numberOfCopies)
         {
             Duration = duration;

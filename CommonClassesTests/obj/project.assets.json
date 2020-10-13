@@ -3255,7 +3255,7 @@
       ]
     },
     "runtime.native.System.IO.Compression/4.3.0": {
-      "sha512": "INBPonS5QPEgn7naufQFXJEp3zX6L4bwHgJ/ZH78aBTpeNfQMtf7C6VrAFhlq2xxWBveIOWyFzQjJ8XzHMhdOQ==",
+      "sha512": "b+V9JC/Ii3sR659flBeaBJww111425tgjcDS1k+hqV4sGh9FALRDBvJnDtQ895gAzpPTUOFDHdqaZ2Et7BpZMg==",
       "type": "package",
       "path": "runtime.native.system.io.compression/4.3.0",
       "files": [
@@ -7368,7 +7368,7 @@
       ]
     },
     "System.Threading.ThreadPool/4.3.0": {
-      "sha512": "k/+g4b7vjdd4aix83sTgC9VG6oXYKAktSfNIJUNGxPEj7ryEOfzHHhfnmsZvjxawwcD9HyWXKCXmPjX8U4zeSw==",
+      "sha512": "SrCOmTvvOOCmJT4BBxdZcwhz6XEMsjBGZvGSVorOxdCznaUNeVotEjDfXGIZ8gcGo00qgPbTV6puHDgcFYl6Iw==",
       "type": "package",
       "path": "system.threading.threadpool/4.3.0",
       "files": [
@@ -7807,23 +7807,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\melfas\\.nuget\\packages\\": {},
+    "C:\\Users\\ramis\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\melfas\\Documents\\GitHub\\libben-2\\CommonClassesTests\\CommonClassesTests.csproj",
+      "projectUniqueName": "C:\\Users\\ramis\\Desktop\\tuc\\programering c# fördjubning\\uppgifter\\uppgift10\\LibraryApplication\\LibraryApplication\\CommonClassesTests\\CommonClassesTests.csproj",
       "projectName": "CommonClassesTests",
-      "projectPath": "C:\\Users\\melfas\\Documents\\GitHub\\libben-2\\CommonClassesTests\\CommonClassesTests.csproj",
-      "packagesPath": "C:\\Users\\melfas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\melfas\\Documents\\GitHub\\libben-2\\CommonClassesTests\\obj\\",
+      "projectPath": "C:\\Users\\ramis\\Desktop\\tuc\\programering c# fördjubning\\uppgifter\\uppgift10\\LibraryApplication\\LibraryApplication\\CommonClassesTests\\CommonClassesTests.csproj",
+      "packagesPath": "C:\\Users\\ramis\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ramis\\Desktop\\tuc\\programering c# fördjubning\\uppgifter\\uppgift10\\LibraryApplication\\LibraryApplication\\CommonClassesTests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\melfas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ramis\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7836,11 +7836,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\melfas\\Documents\\GitHub\\libben-2\\CommonClasses\\CommonClasses.csproj": {
-              "projectPath": "C:\\Users\\melfas\\Documents\\GitHub\\libben-2\\CommonClasses\\CommonClasses.csproj"
+            "C:\\Users\\ramis\\Desktop\\tuc\\programering c# fördjubning\\uppgifter\\uppgift10\\LibraryApplication\\LibraryApplication\\CommonClasses\\CommonClasses.csproj": {
+              "projectPath": "C:\\Users\\ramis\\Desktop\\tuc\\programering c# fördjubning\\uppgifter\\uppgift10\\LibraryApplication\\LibraryApplication\\CommonClasses\\CommonClasses.csproj"
             },
-            "C:\\Users\\melfas\\Documents\\GitHub\\libben-2\\LibraryRepository\\LibraryRepository.csproj": {
-              "projectPath": "C:\\Users\\melfas\\Documents\\GitHub\\libben-2\\LibraryRepository\\LibraryRepository.csproj"
+            "C:\\Users\\ramis\\Desktop\\tuc\\programering c# fördjubning\\uppgifter\\uppgift10\\LibraryApplication\\LibraryApplication\\LibraryRepository\\LibraryRepository.csproj": {
+              "projectPath": "C:\\Users\\ramis\\Desktop\\tuc\\programering c# fördjubning\\uppgifter\\uppgift10\\LibraryApplication\\LibraryApplication\\LibraryRepository\\LibraryRepository.csproj"
             }
           }
         }
@@ -7890,7 +7890,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

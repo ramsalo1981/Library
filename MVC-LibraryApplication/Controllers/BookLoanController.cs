@@ -21,7 +21,7 @@ namespace MVC_LibraryApplication.Controllers
 
         public IActionResult Create()
         {
-            BookLoanModel bookLoanModel = CreateBookLoanModel();
+            BookLoanModel bookLoanModel = new BookLoanModel();
             return View(bookLoanModel);
         }
 
@@ -42,7 +42,7 @@ namespace MVC_LibraryApplication.Controllers
             else if (copiesRemaining <= 0)
             {
                 string errorMessage = "No availiable copies at that date. Please try an other one";
-                BookLoanModel bookLoanModel = CreateBookLoanModel();
+                BookLoanModel bookLoanModel = new BookLoanModel();
                 bookLoanModel.ErrorMessage = errorMessage;
                 return View(bookLoanModel);
             }
@@ -63,15 +63,23 @@ namespace MVC_LibraryApplication.Controllers
             ObjectId loanId = new ObjectId(id);
             BookLoanRepository.UpdateBookLoan(loanId, startDate, endDate);
 
-            return Redirect("/MovieLoan");
+            return Redirect("/BookLoan");
         }
 
         public IActionResult Delete(string id)
         {
             ObjectId loanId = new ObjectId(id);
-            BookLoanRepository.DeleteBookLoan(loanId);
+            Loan bookLoan = BookLoanRepository.GetBookLoanByBookLoanId(loanId);
 
-            return Redirect("/MovieLoan");
+            return View(bookLoan);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        public IActionResult ConfirmDelete(string id)
+        {
+            ObjectId bookLoanId = new ObjectId(id);
+            BookLoanRepository.DeleteBookLoan(bookLoanId);
+            return Redirect("/BookLoan");
         }
 
         public IActionResult Details(string id)
@@ -93,24 +101,6 @@ namespace MVC_LibraryApplication.Controllers
 
             return loan;
         }
-        private BookLoanModel CreateBookLoanModel()
-        {
-            BookLoanModel bookLoanModel = new BookLoanModel();
-            bookLoanModel.Members = GetMembers();
-            bookLoanModel.Books = GetBooks();
-            return bookLoanModel;
-        }
 
-        private List<Member> GetMembers()
-        {
-            List<Member> members = MemberRepository.GetMembers();
-            return members;
-        }
-
-        private List<Book> GetBooks()
-        {
-            List<Book> books = BookRepository.GetBooks();
-            return books;
-        }
     }
 }

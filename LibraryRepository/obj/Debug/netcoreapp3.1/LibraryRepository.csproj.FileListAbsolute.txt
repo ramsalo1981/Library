@@ -6,3 +6,28 @@ C:\Users\melfas\Documents\GitHub\libben-2\LibraryRepository\obj\Debug\netcoreapp
 C:\Users\melfas\Documents\GitHub\libben-2\LibraryRepository\obj\Debug\netcoreapp3.1\LibraryRepository.dll
 C:\Users\melfas\Documents\GitHub\libben-2\LibraryRepository\obj\Debug\netcoreapp3.1\LibraryRepository.pdb
 C:\Users\melfas\Documents\GitHub\libben-2\LibraryRepository\obj\Debug\netcoreapp3.1\LibraryRepository.csprojAssemblyReference.cache
+C:\Users\danie\source\repos\LibraryApplication\LibraryRepository\bin\Debug\netcoreapp3.1\LibraryRepository.deps.json
+C:\Users\danie\source\repos\LibraryApplication\LibraryRepository\bin\Debug\netcoreapp3.1\LibraryRepository.dll
+C:\Users\danie\source\repos\LibraryApplication\LibraryRepository\bin\Debug\netcoreapp3.1\LibraryRepository.pdb
+C:\Users\danie\source\repos\LibraryApplication\LibraryRepository\obj\Debug\netcoreapp3.1\LibraryRepository.csprojAssemblyReference.cache
+C:\Users\danie\source\repos\LibraryApplication\LibraryRepository\obj\Debug\netcoreapp3.1\LibraryRepository.AssemblyInfoInputs.cache
+C:\Users\danie\source\repos\LibraryApplication\LibraryRepository\obj\Debug\netcoreapp3.1\LibraryRepository.AssemblyInfo.cs
+C:\Users\danie\source\repos\LibraryApplication\LibraryRepository\obj\Debug\netcoreapp3.1\LibraryRepository.dll
+C:\Users\danie\source\repos\LibraryApplication\LibraryRepository\obj\Debug\netcoreapp3.1\LibraryRepository.pdb
+C:\Users\ramis\Desktop\tuc\programering c# fördjubning\uppgifter\LibraryApplication\LibraryApplication\LibraryRepository\bin\Debug\netcoreapp3.1\LibraryRepository.deps.json
+C:\Users\ramis\Desktop\tuc\programering c# fördjubning\uppgifter\LibraryApplication\LibraryApplication\LibraryRepository\bin\Debug\netcoreapp3.1\LibraryRepository.dll
+C:\Users\ramis\Desktop\tuc\programering c# fördjubning\uppgifter\LibraryApplication\LibraryApplication\LibraryRepository\bin\Debug\netcoreapp3.1\LibraryRepository.pdb
+C:\Users\ramis\Desktop\tuc\programering c# fördjubning\uppgifter\LibraryApplication\LibraryApplication\LibraryRepository\obj\Debug\netcoreapp3.1\LibraryRepository.csprojAssemblyReference.cache
+C:\Users\ramis\Desktop\tuc\programering c# fördjubning\uppgifter\LibraryApplication\LibraryApplication\LibraryRepository\obj\Debug\netcoreapp3.1\LibraryRepository.AssemblyInfoInputs.cache
+C:\Users\ramis\Desktop\tuc\programering c# fördjubning\uppgifter\LibraryApplication\LibraryApplication\LibraryRepository\obj\Debug\netcoreapp3.1\LibraryRepository.AssemblyInfo.cs
+C:\Users\ramis\Desktop\tuc\programering c# fördjubning\uppgifter\LibraryApplication\LibraryApplication\LibraryRepository\obj\Debug\netcoreapp3.1\LibraryRepository.dll
+C:\Users\ramis\Desktop\tuc\programering c# fördjubning\uppgifter\LibraryApplication\LibraryApplication\LibraryRepository\obj\Debug\netcoreapp3.1\LibraryRepository.pdb
+C:\Users\ramis\Desktop\tuc\programering c# fördjubning\uppgifter\uppgift10\LibraryApplication\LibraryApplication\LibraryRepository\bin\Debug\netcoreapp3.1\LibraryRepository.deps.json
+C:\Users\ramis\Desktop\tuc\programering c# fördjubning\uppgifter\uppgift10\LibraryApplication\LibraryApplication\LibraryRepository\bin\Debug\netcoreapp3.1\LibraryRepository.dll
+C:\Users\ramis\Desktop\tuc\programering c# fördjubning\uppgifter\uppgift10\LibraryApplication\LibraryApplication\LibraryRepository\bin\Debug\netcoreapp3.1\LibraryRepository.pdb
+C:\Users\ramis\Desktop\tuc\programering c# fördjubning\uppgifter\uppgift10\LibraryApplication\LibraryApplication\LibraryRepository\obj\Debug\netcoreapp3.1\LibraryRepository.csprojAssemblyReference.cache
+C:\Users\ramis\Desktop\tuc\programering c# fördjubning\uppgifter\uppgift10\LibraryApplication\LibraryApplication\LibraryRepository\obj\Debug\netcoreapp3.1\LibraryRepository.AssemblyInfoInputs.cache
+C:\Users\ramis\Desktop\tuc\programering c# fördjubning\uppgifter\uppgift10\LibraryApplication\LibraryApplication\LibraryRepository\obj\Debug\netcoreapp3.1\LibraryRepository.AssemblyInfo.cs
+C:\Users\ramis\Desktop\tuc\programering c# fördjubning\uppgifter\uppgift10\LibraryApplication\LibraryApplication\LibraryRepository\obj\Debug\netcoreapp3.1\LibraryRepository.csproj.CoreCompileInputs.cache
+C:\Users\ramis\Desktop\tuc\programering c# fördjubning\uppgifter\uppgift10\LibraryApplication\LibraryApplication\LibraryRepository\obj\Debug\netcoreapp3.1\LibraryRepository.dll
+C:\Users\ramis\Desktop\tuc\programering c# fördjubning\uppgifter\uppgift10\LibraryApplication\LibraryApplication\LibraryRepository\obj\Debug\netcoreapp3.1\LibraryRepository.pdb
